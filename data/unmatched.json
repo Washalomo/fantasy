@@ -1,9 +1,23 @@
 {
+ "99171": {
+  "name": "Maximiliano Fernández",
+  "team": "ULC",
+  "jersey": "30",
+  "pos": null,
+  "seen": 1
+ },
  "101764": {
   "name": "Cristian Suárez",
   "team": "DCO",
   "jersey": "13",
   "pos": 1,
+  "seen": 2
+ },
+ "121092": {
+  "name": "Jorge Pinos",
+  "team": "CSL",
+  "jersey": "30",
+  "pos": null,
   "seen": 1
  },
  "152855": {
@@ -11,6 +25,13 @@
   "team": "UDC",
   "jersey": "4",
   "pos": 1,
+  "seen": 2
+ },
+ "179904": {
+  "name": "Matías Sepúlveda",
+  "team": "CSL",
+  "jersey": "21",
+  "pos": null,
   "seen": 1
  },
  "208650": {
@@ -18,6 +39,13 @@
   "team": "HUA",
   "jersey": "28",
   "pos": 2,
+  "seen": 2
+ },
+ "215531": {
+  "name": "Victor Campos",
+  "team": "CSL",
+  "jersey": "43",
+  "pos": 1,
   "seen": 1
  },
  "252606": {
@@ -25,34 +53,48 @@
   "team": "LIM",
   "jersey": "20",
   "pos": null,
-  "seen": 1
+  "seen": 2
  },
  "253964": {
   "name": "Agustín Nadruz",
   "team": "CSL",
   "jersey": "5",
-  "pos": 2,
-  "seen": 1
+  "pos": null,
+  "seen": 2
  },
  "258609": {
   "name": "Ignacio Mesías",
   "team": "DCO",
   "jersey": "17",
   "pos": null,
-  "seen": 1
+  "seen": 2
  },
  "265861": {
   "name": "Francisco González",
   "team": "OHI",
   "jersey": "24",
   "pos": 2,
+  "seen": 2
+ },
+ "270586": {
+  "name": "Jonathan Andia",
+  "team": "ULC",
+  "jersey": "2",
+  "pos": null,
   "seen": 1
  },
  "285042": {
   "name": "Franco Calderon",
   "team": "UCH",
   "jersey": "2",
-  "pos": 1,
+  "pos": null,
+  "seen": 2
+ },
+ "285908": {
+  "name": "Vicente Ramírez",
+  "team": "UCH",
+  "jersey": "34",
+  "pos": null,
   "seen": 1
  },
  "292111": {
@@ -60,12 +102,19 @@
   "team": "DCO",
   "jersey": "6",
   "pos": 2,
-  "seen": 1
+  "seen": 2
  },
  "297772": {
   "name": "Lucas Assadi",
   "team": "UCH",
   "jersey": "10",
+  "pos": 3,
+  "seen": 2
+ },
+ "302630": {
+  "name": "Tiago Galletto",
+  "team": "LIM",
+  "jersey": "27",
   "pos": 2,
   "seen": 1
  },
@@ -74,13 +123,20 @@
   "team": "HUA",
   "jersey": "13",
   "pos": 1,
-  "seen": 1
+  "seen": 2
  },
  "315956": {
   "name": "Rodrigo Cáceres",
   "team": "ULC",
   "jersey": "6",
   "pos": 1,
+  "seen": 2
+ },
+ "320580": {
+  "name": "Martin Ramirez",
+  "team": "UDC",
+  "jersey": "35",
+  "pos": null,
   "seen": 1
  },
  "328737": {
@@ -88,26 +144,124 @@
   "team": "ULC",
   "jersey": "29",
   "pos": 2,
-  "seen": 1
+  "seen": 2
  },
  "335211": {
   "name": "Esteban Matus",
   "team": "AUD",
   "jersey": "23",
   "pos": 1,
-  "seen": 1
+  "seen": 2
  },
  "335212": {
   "name": "Daniel Piña",
   "team": "AUD",
   "jersey": "4",
   "pos": 1,
+  "seen": 2
+ },
+ "335239": {
+  "name": "Ignacio Fuenzalida",
+  "team": "AUD",
+  "jersey": "33",
+  "pos": null,
+  "seen": 1
+ },
+ "338444": {
+  "name": "Bastian Muñoz",
+  "team": "NUB",
+  "jersey": "36",
+  "pos": null,
+  "seen": 1
+ },
+ "338864": {
+  "name": "Cristobal Chadwick",
+  "team": "EVE",
+  "jersey": "18",
+  "pos": null,
   "seen": 1
  },
  "343223": {
   "name": "Byron Navarro",
   "team": "EVE",
   "jersey": "36",
+  "pos": null,
+  "seen": 2
+ },
+ "345354": {
+  "name": "Jhon Cortes",
+  "team": "UCH",
+  "jersey": "13",
+  "pos": null,
+  "seen": 1
+ },
+ "359156": {
+  "name": "Martín Cárcamo",
+  "team": "EVE",
+  "jersey": "13",
+  "pos": null,
+  "seen": 1
+ },
+ "359981": {
+  "name": "Christian Mansilla",
+  "team": "NUB",
+  "jersey": "35",
+  "pos": 2,
+  "seen": 1
+ },
+ "360439": {
+  "name": "Elias Rojas",
+  "team": "UCH",
+  "jersey": "16",
+  "pos": 2,
+  "seen": 1
+ },
+ "364461": {
+  "name": "Bastián Escobar",
+  "team": "DCO",
+  "jersey": "39",
+  "pos": 2,
+  "seen": 1
+ },
+ "365000": {
+  "name": "Santiago Londoño",
+  "team": "EVE",
+  "jersey": "22",
+  "pos": null,
+  "seen": 1
+ },
+ "372010": {
+  "name": "Benjamín Pérez",
+  "team": "OHI",
+  "jersey": "34",
+  "pos": null,
+  "seen": 1
+ },
+ "381141": {
+  "name": "Joan Orellana",
+  "team": "LSE",
+  "jersey": "28",
+  "pos": 1,
+  "seen": 1
+ },
+ "381680": {
+  "name": "Dixon Pereira",
+  "team": "COQ",
+  "jersey": "31",
+  "pos": null,
+  "seen": 1
+ },
+ "382919": {
+  "name": "Benjamin Moreno",
+  "team": "CSL",
+  "jersey": "28",
+  "pos": null,
+  "seen": 1
+ },
+ "383107": {
+  "name": "Luca Kmet",
+  "team": "UDC",
+  "jersey": "28",
   "pos": null,
   "seen": 1
  },
@@ -116,13 +270,41 @@
   "team": "LSE",
   "jersey": "15",
   "pos": null,
-  "seen": 1
+  "seen": 2
  },
  "385250": {
   "name": "Daniel Cordero",
   "team": "LSE",
   "jersey": "25",
   "pos": null,
+  "seen": 2
+ },
+ "388813": {
+  "name": "Alvaro Abarzua",
+  "team": "HUA",
+  "jersey": "33",
+  "pos": null,
+  "seen": 1
+ },
+ "399321": {
+  "name": "José Movillo",
+  "team": "OHI",
+  "jersey": "27",
+  "pos": 1,
+  "seen": 1
+ },
+ "399325": {
+  "name": "Sebastián Melgarejo",
+  "team": "HUA",
+  "jersey": "38",
+  "pos": null,
+  "seen": 1
+ },
+ "399328": {
+  "name": "Vicente Guzmán",
+  "team": "NUB",
+  "jersey": "27",
+  "pos": 2,
   "seen": 1
  },
  "399490": {
@@ -130,12 +312,166 @@
   "team": "UDC",
   "jersey": "27",
   "pos": null,
+  "seen": 2
+ },
+ "399505": {
+  "name": "Martín Guzmán",
+  "team": "EVE",
+  "jersey": "23",
+  "pos": null,
+  "seen": 1
+ },
+ "401113": {
+  "name": "Ian Alegria",
+  "team": "PAL",
+  "jersey": "30",
+  "pos": null,
+  "seen": 1
+ },
+ "401126": {
+  "name": "Jose Hernandez",
+  "team": "EVE",
+  "jersey": "26",
+  "pos": null,
   "seen": 1
  },
  "401132": {
   "name": "Amaro Leon",
   "team": "EVE",
   "jersey": "28",
+  "pos": null,
+  "seen": 2
+ },
+ "402350": {
+  "name": "Nicolás Fuentes",
+  "team": "DCO",
+  "jersey": "31",
+  "pos": 2,
+  "seen": 1
+ },
+ "405613": {
+  "name": "Joaquín Muñoz",
+  "team": "OHI",
+  "jersey": "13",
+  "pos": null,
+  "seen": 1
+ },
+ "413810": {
+  "name": "Francisco Daza",
+  "team": "UC",
+  "jersey": "34",
+  "pos": 1,
+  "seen": 1
+ },
+ "417683": {
+  "name": "Benjamín Sáez",
+  "team": "UDC",
+  "jersey": "32",
+  "pos": 1,
+  "seen": 1
+ },
+ "418007": {
+  "name": "Joshua Arancibia",
+  "team": "COQ",
+  "jersey": "19",
+  "pos": null,
+  "seen": 1
+ },
+ "418009": {
+  "name": "Milovan Velásquez",
+  "team": "LSE",
+  "jersey": "20",
+  "pos": null,
+  "seen": 1
+ },
+ "418351": {
+  "name": "Benjamín Villarroel",
+  "team": "CSL",
+  "jersey": "3",
+  "pos": null,
+  "seen": 1
+ },
+ "418357": {
+  "name": "Francisco Herrera",
+  "team": "UDC",
+  "jersey": "34",
+  "pos": null,
+  "seen": 1
+ },
+ "418385": {
+  "name": "Bastian Sandoval",
+  "team": "LSE",
+  "jersey": "19",
+  "pos": null,
+  "seen": 1
+ },
+ "418390": {
+  "name": "Albert Gómez",
+  "team": "PAL",
+  "jersey": "13",
+  "pos": null,
+  "seen": 1
+ },
+ "418740": {
+  "name": "Vicente Zenteno",
+  "team": "AUD",
+  "jersey": "2",
+  "pos": 1,
+  "seen": 1
+ },
+ "419020": {
+  "name": "Maximiliano Osorio",
+  "team": "HUA",
+  "jersey": "36",
+  "pos": null,
+  "seen": 1
+ },
+ "419890": {
+  "name": "Benjamín Argandona",
+  "team": "ULC",
+  "jersey": "21",
+  "pos": null,
+  "seen": 1
+ },
+ "420936": {
+  "name": "Martín Torrejón",
+  "team": "HUA",
+  "jersey": "51",
+  "pos": null,
+  "seen": 1
+ },
+ "422262": {
+  "name": "Felipe Raipán",
+  "team": "COL",
+  "jersey": "50",
+  "pos": null,
+  "seen": 1
+ },
+ "3099537": {
+  "name": "Martin Alonso Suazo Figueroa",
+  "team": "UDC",
+  "jersey": "36",
+  "pos": 2,
+  "seen": 1
+ },
+ "3099649": {
+  "name": "Freddy Damian Alegria Moreno",
+  "team": "HUA",
+  "jersey": "53",
+  "pos": null,
+  "seen": 1
+ },
+ "3102246": {
+  "name": "David Larrahondo Caicedo",
+  "team": "HUA",
+  "jersey": "52",
+  "pos": null,
+  "seen": 1
+ },
+ "3112916": {
+  "name": "Juan Ignacio Poblete Miranda",
+  "team": "OHI",
+  "jersey": "38",
   "pos": null,
   "seen": 1
  }
