@@ -53,7 +53,7 @@ async function main() {
     const input = [];
     let sampled = fs.existsSync(path.join(DATA, 'debug/summary.json'));
     for (const ev of events) {
-      if (ev.status !== 'post' || done.has(ev.id)) { input.push(ev); continue; }
+      if (ev.status !== 'post' || (done.has(ev.id) && !args.has('--season'))) { input.push(ev); continue; }
       const goalsH = ev.details.filter(d => (d.type === 'goal' || d.type === 'penalty_goal' || d.type === 'own_goal') && d.teamId === ev.home.teamId).length;
       const goalsA = ev.details.filter(d => (d.type === 'goal' || d.type === 'penalty_goal' || d.type === 'own_goal') && d.teamId === ev.away.teamId).length;
       if (goalsH !== ev.home.score || goalsA !== ev.away.score) report.errors.push(`partido ${ev.id}: goles del detalle (${goalsH}-${goalsA}) no cuadran con el marcador (${ev.home.score}-${ev.away.score}); se usan igual`);
