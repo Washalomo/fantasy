@@ -75,6 +75,11 @@ async function main() {
     report.matches = input.length;
     report.newFinished = out.report.finished;
     report.unmatchedPlayers = [...new Set(out.report.unmatchedPlayers)];
+    // jugadores que juegan pero no están en el catálogo: se acumulan con sus minutos para agregarlos
+    const extra = read('unmatched.json', {});
+    for (const [id, u] of Object.entries(out.report.unmatched || {})) extra[id] = { ...(extra[id] || {}), ...u, seen: ((extra[id] && extra[id].seen) || 0) + 1 };
+    for (const id of Object.keys(extra)) if (out.idmap[id]) delete extra[id]; // ya identificado
+    write('unmatched.json', extra);
     report.unknownTeams = out.report.unknownTeams;
     report.espnCalls = api.calls();
   }

@@ -2,7 +2,10 @@
 // Precio = puntos esperados por fecha (60% toda la temporada + 40% últimos 5 partidos de su club),
 // combinados con la estimación previa del jugador (pesa como 3 partidos, así un solo partido no dispara
 // el precio), llevados a la escala completa de LaLiga con Core.REAL_SCALE y convertidos con Core.valueFor.
-const PRIOR_GAMES = 3, MAX_E = 10;
+const PRIOR_GAMES = 3;
+// Sobre 8 puntos por fecha (escala completa) la curva se suaviza a la mitad: así la élite se diferencia
+// sin que los mejores superen lo que permite un presupuesto de $100 M.
+const compress = x => (x <= 8 ? x : Math.min(13, 8 + (x - 8) * 0.5));
 
 function seasonPrices({ Core, PLAYERS_RAW, EXP = {}, calendar, results }) {
   const K = Core.STAT_KEYS, IP = K.indexOf('pts'), IM = K.indexOf('min'), IG = K.indexOf('g'), IA = K.indexOf('a');
@@ -41,7 +44,7 @@ function seasonPrices({ Core, PLAYERS_RAW, EXP = {}, calendar, results }) {
     const e = n ? (n * eReal + PRIOR_GAMES * prior) / (n + PRIOR_GAMES) : null;
     players[pid] = {
       e: e == null ? null : Math.round(e * 100) / 100,
-      v: e == null ? null : Core.valueFor(Math.min(MAX_E, Math.max(0, e) / sc)),
+      v: e == null ? null : Core.valueFor(compress(Math.max(0, e) / sc)),
       pj, pts, min, g, a, last5,
     };
   }

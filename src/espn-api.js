@@ -106,8 +106,11 @@ async function summaryRosters(eventId) {
       if (ath.id == null) continue;
       const stats = {};
       for (const st of e.stats || []) if (st && st.name) stats[st.name] = Number(st.value != null ? st.value : st.displayValue) || 0;
+      const pa = String((e.position && e.position.abbreviation) || (ath.position && ath.position.abbreviation) || '').toUpperCase();
+      const pn = String((ath.position && (ath.position.name || ath.position.displayName)) || '').toLowerCase();
+      const pos = /^G/.test(pa) || /goal/.test(pn) ? 0 : /^(CD|CB|RB|LB|D|SW|WB|RWB|LWB)/.test(pa) || /defend/.test(pn) ? 1 : /^(CM|DM|AM|LM|RM|M)/.test(pa) || /midfield/.test(pn) ? 2 : /^(F|CF|ST|LW|RW|W)/.test(pa) || /forward|striker/.test(pn) ? 3 : null;
       map[String(ath.id)] = {
-        name: ath.displayName || ath.fullName || null, jersey: e.jersey || ath.jersey || null, starter: !!e.starter,
+        name: ath.displayName || ath.fullName || null, jersey: e.jersey || ath.jersey || null, starter: !!e.starter, pos,
         inMin: e.subbedIn && e.subbedIn.didSub ? minuteOf(e.subbedIn.clock || e.subbedIn) : null,
         outMin: e.subbedOut && e.subbedOut.didSub ? minuteOf(e.subbedOut.clock || e.subbedOut) : null,
         subIn: !!(e.subbedIn && (e.subbedIn.didSub || e.subbedIn === true)), subOut: !!(e.subbedOut && (e.subbedOut.didSub || e.subbedOut === true)),
@@ -163,7 +166,7 @@ async function fullMatch(ev) {
         const sb = sum.subs.find(x => x.ids.includes(id));
         if (sb) { if (s.subIn) inMin = sb.minute; else outMin = sb.minute; }
       }
-      list.push({ athleteId: id, name: s.name || null, jersey: c.jersey || s.jersey || null, starter: !!(c.starter || s.starter), inMin: inMin != null ? inMin : (s.subIn && !s.starter ? 60 : null), outMin, stats: s.stats || null });
+      list.push({ athleteId: id, name: s.name || null, jersey: c.jersey || s.jersey || null, pos: s.pos != null ? s.pos : null, starter: !!(c.starter || s.starter), inMin: inMin != null ? inMin : (s.subIn && !s.starter ? 60 : null), outMin, stats: s.stats || null });
     }
     rosters[side] = list;
   }

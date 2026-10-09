@@ -53,8 +53,14 @@ const Espn = (() => {
     const c = (ROSTER[team] || []).filter(x => x.num === n);
     return c.length === 1 ? c[0] : null;
   }
-  // Identifica a un jugador de ESPN: primero por nombre, si no por dorsal
-  function resolve(team, name, jersey) { return (name && matchPlayer(team, name)) || matchByJersey(team, jersey); }
+  // Mismo nombre en otro club (jugadores transferidos durante la temporada)
+  function matchAnyTeam(name) {
+    let found = null;
+    for (let t = 0; t < TEAMS.length; t++) { const c = matchPlayer(t, name); if (c) { if (found) return null; found = c; } }
+    return found;
+  }
+  // Identifica a un jugador de ESPN: por nombre en su club, por dorsal, o por nombre en otro club
+  function resolve(team, name, jersey) { return (name && matchPlayer(team, name)) || matchByJersey(team, jersey) || (name && matchAnyTeam(name)) || null; }
 
   // Agrupa partidos en fechas. Una fecha = ventana de días con varios partidos y cada club una sola vez.
   // Los partidos sueltos (reprogramados a mitad de semana) toman el número de la fecha original:
@@ -171,13 +177,13 @@ const Espn = (() => {
       for (const side of ['home', 'away']) {
         const tIdx = side === 'home' ? h : a;
         const list = (raw.rosters && raw.rosters[side]) || [];
-        m.rosters[tIdx] = list.map(r => ({ athleteId: String(r.athleteId), name: r.name || null, jersey: r.jersey, starter: !!r.starter, inMin: r.inMin != null ? Number(r.inMin) : null, outMin: r.outMin != null ? Number(r.outMin) : null, stats: r.stats || null }));
+        m.rosters[tIdx] = list.map(r => ({ athleteId: String(r.athleteId), name: r.name || null, jersey: r.jersey, starter: !!r.starter, inMin: r.inMin != null ? Number(r.inMin) : null, outMin: r.outMin != null ? Number(r.outMin) : null, stats: r.stats || null, pos: r.pos || null }));
       }
       // nombres conocidos por goles y tarjetas (más confiables que el dorsal)
       for (const d of m.details) {
         if (!d.athleteId || !d.name) continue;
         const playerTeam = d.type === 'own_goal' ? (d.team === h ? a : h) : d.team;
-        const c = matchPlayer(playerTeam, d.name);
+        const c = matchPlayer(playerTeam, d.name) || matchAnyTeam(d.name);
         if (c) idmap[d.athleteId] = c.id;
         else if (idmap[d.athleteId] === undefined) idmap[d.athleteId] = null;
       }
@@ -186,7 +192,10 @@ const Espn = (() => {
           if (idmap[r.athleteId] === undefined || (idmap[r.athleteId] === null && r.name)) {
             const c = resolve(tIdx, r.name, r.jersey);
             idmap[r.athleteId] = c ? c.id : null;
-            if (!c && (r.starter || r.inMin != null)) report.unmatchedPlayers.push(`${r.name || '#' + r.jersey} (${TEAMS[tIdx].short})`);
+            if (!c && (r.starter || r.inMin != null)) {
+              report.unmatchedPlayers.push(`${r.name || '#' + r.jersey} (${TEAMS[tIdx].short})`);
+              (report.unmatched = report.unmatched || {})[r.athleteId] = { name: r.name, team: TEAMS[tIdx].short, jersey: r.jersey || null, pos: r.pos || null };
+            }
           }
         }
       }
