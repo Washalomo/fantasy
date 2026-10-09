@@ -1,0 +1,11 @@
+{
+  "name": "fantasy-primera",
+  "private": true,
+  "description": "Fantasy de la Liga de Primera de Chile: sincronización de partidos reales (ESPN) y motor de puntos, precios y cláusulas estilo LaLiga Fantasy",
+  "scripts": {
+    "sync": "node src/sync.js",
+    "sync:temporada": "node src/sync.js --season",
+    "test": "node test/run.js"
+  },
+  "engines": { "node": ">=20" }
+}
