@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: 22
       - name: Probar Sofascore y FotMob
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           git config user.name "fantasy-sync"
           git config user.email "fantasy-sync@users.noreply.github.com"

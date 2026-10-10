@@ -58,17 +58,23 @@ const keep = (t, f) => { if (t.json) { try { t.summary = f(t.json); } catch (e) 
   }
 
   // ---------- FotMob ----------
-  const fm = await get('fotmob liga 273', 'https://www.fotmob.com/api/leagues?id=273&ccode3=CHL');
+  let fm = null;
+  for (const u of ['https://www.fotmob.com/api/data/leagues?id=273&ccode3=CHL', 'https://www.fotmob.com/api/leagues?id=273']) {
+    fm = await get('fotmob liga 273', u);
+    if (fm.json) break;
+    if (fm.sample) fm.sample = fm.sample.slice(0, 120);
+  }
   let mid = null;
-  if (fm.json) {
-    const all = (fm.json.fixtures && (fm.json.fixtures.allMatches || fm.json.matches && fm.json.matches.allMatches)) || (fm.json.matches && fm.json.matches.allMatches) || [];
+  if (fm && fm.json) {
+    const all = (fm.json.fixtures && fm.json.fixtures.allMatches) || (fm.json.matches && fm.json.matches.allMatches) || [];
     const fin = all.filter(m => m.status && m.status.finished);
     mid = fin.length ? fin[fin.length - 1].id : null;
-    keep(fm, j => ({ nombre: j.details && j.details.name, pais: j.details && j.details.country, partidos: all.length, ultimo: fin.length ? `${fin[fin.length - 1].home.name} ${fin[fin.length - 1].status.scoreStr} ${fin[fin.length - 1].away.name}` : null }));
+    keep(fm, j => ({ nombre: j.details && j.details.name, pais: j.details && j.details.country, partidos: all.length, ultimo: fin.length ? `${fin[fin.length - 1].id} ${fin[fin.length - 1].home.name} ${fin[fin.length - 1].status.scoreStr} ${fin[fin.length - 1].away.name}` : null, claves: Object.keys(j) }));
   }
   if (mid) {
-    for (const u of [`https://www.fotmob.com/api/matchDetails?matchId=${mid}`, `https://www.fotmob.com/api/data/matchDetails?matchId=${mid}`]) {
+    for (const u of [`https://www.fotmob.com/api/data/matchDetails?matchId=${mid}`, `https://www.fotmob.com/api/matchDetails?matchId=${mid}`]) {
       const md = await get('fotmob detalle de partido', u);
+      if (md.sample) md.sample = md.sample.slice(0, 160);
       keep(md, j => {
         const ps = j.content && j.content.playerStats;
         if (!ps) return { claves: Object.keys(j.content || j) };
@@ -78,6 +84,24 @@ const keep = (t, f) => { if (t.json) { try { t.summary = f(t.json); } catch (e) 
       if (md.summary) break;
     }
   }
+
+  // ---------- API-Football (solo si hay clave en los secretos del repositorio) ----------
+  const key = process.env.API_FOOTBALL_KEY;
+  if (key) {
+    const H = { 'x-apisports-key': key };
+    const lg = await get('api-football ligas de Chile', 'https://v3.football.api-sports.io/leagues?country=Chile', H);
+    let lid = null;
+    keep(lg, j => { const l = (j.response || []).find(x => /primera/i.test(x.league.name) && x.league.type === 'League'); lid = l && l.league.id; return { errores: j.errors, liga: l && `${l.league.id} ${l.league.name}`, temporadas: l && l.seasons.slice(-3).map(s => `${s.year} jugadores:${s.coverage && s.coverage.fixtures && s.coverage.fixtures.statistics_players}`) }; });
+    if (lid) {
+      const fx = await get('api-football partidos 2026', `https://v3.football.api-sports.io/fixtures?league=${lid}&season=2026&last=1`, H);
+      let fid = null;
+      keep(fx, j => { const f = (j.response || [])[0]; fid = f && f.fixture.id; return { errores: j.errors, resultados: j.results, partido: f && `${f.fixture.id} ${f.teams.home.name} ${f.goals.home}-${f.goals.away} ${f.teams.away.name}` }; });
+      if (fid) {
+        const pl = await get('api-football estadísticas por jugador', `https://v3.football.api-sports.io/fixtures/players?fixture=${fid}`, H);
+        keep(pl, j => { const t = (j.response || [])[0]; const p = t && t.players.find(x => x.statistics[0].games.minutes); return { errores: j.errors, jugador: p && p.player.name, estadisticas: p && p.statistics[0] }; });
+      }
+    }
+  } else out.tests.push({ name: 'api-football', nota: 'sin clave API_FOOTBALL_KEY en los secretos del repositorio' });
 
   fs.mkdirSync(path.join(__dirname, '..', 'data', 'debug'), { recursive: true });
   fs.writeFileSync(path.join(__dirname, '..', 'data', 'debug', 'probe.json'), JSON.stringify(out, null, 1));
