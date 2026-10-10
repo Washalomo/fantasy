@@ -2,9 +2,6 @@ name: Probar fuentes de estadísticas
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['tools/probe.js', '.github/workflows/probe.yml']
 
 permissions:
   contents: write
