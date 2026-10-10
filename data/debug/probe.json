@@ -1,5 +1,5 @@
 {
- "at": "2026-10-10T00:16:34.753Z",
+ "at": "2026-10-10T00:18:37.941Z",
  "tests": [
   {
    "name": "sofascore países",
@@ -17,10 +17,92 @@
   },
   {
    "name": "fotmob liga 273",
-   "url": "https://www.fotmob.com/api/leagues?id=273&ccode3=CHL",
-   "status": 404,
-   "bytes": 209128,
-   "sample": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\"><head><meta name=\"apple-itunes-app\" content=\"app-id=488575683\"/><link rel=\"alternate\" href=\"android-app://com.mobilefootie.wc2010/http\"/><link rel=\"apple-touch-icon\" href=\"/img/android-icon-192x192.png\"/><link rel=\"manifest\" href=\"/manifest.json\"/><link rel=\""
+   "url": "https://www.fotmob.com/api/data/leagues?id=273&ccode3=CHL",
+   "status": 200,
+   "bytes": 662209,
+   "summary": {
+    "nombre": "Liga de Primera",
+    "pais": "CHI",
+    "partidos": 240,
+    "ultimo": "1000013235 Universidad de Concepción 0 - 2 Huachipato",
+    "claves": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ]
+   }
+  },
+  {
+   "name": "fotmob detalle de partido",
+   "url": "https://www.fotmob.com/api/data/matchDetails?matchId=1000013235",
+   "status": 200,
+   "bytes": 182027,
+   "summary": {
+    "jugador": "Osvaldo González",
+    "grupos": [
+     {
+      "titulo": "Top stats",
+      "campos": [
+       "FotMob rating",
+       "Minutes played",
+       "Goals",
+       "Assists",
+       "Accurate passes",
+       "Chances created",
+       "Error led to goal",
+       "Shotmap",
+       "Defensive actions"
+      ]
+     },
+     {
+      "titulo": "Attack",
+      "campos": [
+       "Touches",
+       "Touches in opposition box",
+       "Passes into final third",
+       "Accurate crosses",
+       "Accurate long balls",
+       "Dispossessed"
+      ]
+     },
+     {
+      "titulo": "Defense",
+      "campos": [
+       "Defensive actions",
+       "Tackles",
+       "Blocks",
+       "Clearances",
+       "Headed clearance",
+       "Interceptions",
+       "Recoveries",
+       "Dribbled past"
+      ]
+     },
+     {
+      "titulo": "Duels",
+      "campos": [
+       "Ground duels won",
+       "Aerial duels won",
+       "Was fouled",
+       "Fouls committed",
+       "Duels won"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "api-football",
+   "nota": "sin clave API_FOOTBALL_KEY en los secretos del repositorio"
   }
  ]
 }
