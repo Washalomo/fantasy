@@ -1,19 +1,21 @@
 {
- "at": "2026-10-10T05:40:46.526Z",
+ "at": "2026-10-10T20:40:26.974Z",
  "mode": "normal",
  "errors": [],
  "days": 8,
  "fotmob": {
   "partidos": 240,
-  "leidos": 0,
-  "conDetalle": 0
+  "leidos": 1,
+  "conDetalle": 1
  },
  "matches": 16,
- "newFinished": 0,
- "unmatchedPlayers": [],
+ "newFinished": 1,
+ "unmatchedPlayers": [
+  "Martín Espinoza (CSL, FotMob)"
+ ],
  "unknownTeams": [],
- "detailedMatches": 0,
- "espnCalls": 9,
- "seasonGames": 175,
- "seconds": 2
+ "detailedMatches": 1,
+ "espnCalls": 12,
+ "seasonGames": 176,
+ "seconds": 4
 }
