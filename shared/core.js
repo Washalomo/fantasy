@@ -186,10 +186,10 @@ const Core = (() => {
     return Math.max(0, p / teamGames);
   }
 
-  // Parte del puntaje completo que cubren los datos reales de ESPN (minutos, goles, asistencias, remates,
-  // remates al arco, atajadas, goles recibidos, tarjetas), por posición. Medido con 2 temporadas simuladas.
-  // Sirve para que los precios no bajen solo porque ESPN no publica recuperaciones, despejes o regates.
-  const REAL_SCALE = [0.92, 0.44, 0.54, 0.74];
+  // Relación entre los puntos reales (ESPN + FotMob/Opta, con Puntos Plus por nota) y la escala con que se
+  // calibró la curva de precios, por posición. Medida con la temporada 2026 (jugadores con 8+ partidos):
+  // POR 1,56 · DEF 1,28 · MED 0,99 · DEL 1,28, suavizada para que los arqueros y defensas no queden baratos.
+  const REAL_SCALE = [1.25, 1.15, 0.9, 1.15];
   const BASIC_SCALE = REAL_SCALE;
 
   // ---------- Precio: un ciclo de mercado para un jugador ----------

@@ -1,7 +1,7 @@
 // Rendimiento de la temporada y precio sugerido por jugador, a partir de todos los partidos procesados.
 // Precio = puntos esperados por fecha (60% toda la temporada + 40% últimos 5 partidos de su club),
 // combinados con la estimación previa del jugador (pesa como 3 partidos, así un solo partido no dispara
-// el precio), llevados a la escala completa de LaLiga con Core.REAL_SCALE y convertidos con Core.valueFor.
+// el precio), llevados a la escala de la curva de precios con Core.REAL_SCALE y convertidos con Core.valueFor.
 const PRIOR_GAMES = 3;
 // Sobre 8 puntos por fecha (escala completa) la curva se suaviza a la mitad: así la élite se diferencia
 // sin que los mejores superen lo que permite un presupuesto de $100 M.
