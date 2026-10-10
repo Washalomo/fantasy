@@ -192,12 +192,16 @@ const Espn = (() => {
           if (idmap[r.athleteId] === undefined || (idmap[r.athleteId] === null && r.name)) {
             const c = resolve(tIdx, r.name, r.jersey);
             idmap[r.athleteId] = c ? c.id : null;
-            if (!c && (r.starter || r.inMin != null)) {
-              report.unmatchedPlayers.push(`${r.name || '#' + r.jersey} (${TEAMS[tIdx].short})`);
-              (report.unmatched = report.unmatched || {})[r.athleteId] = { name: r.name, team: TEAMS[tIdx].short, jersey: r.jersey || null, pos: r.pos || null };
-            }
+            if (!c && (r.starter || r.inMin != null)) report.unmatchedPlayers.push(`${r.name || '#' + r.jersey} (${TEAMS[tIdx].short})`);
           }
         }
+      }
+      if (m.status === 'post') for (const tIdx of [h, a]) for (const r of m.rosters[tIdx] || []) {
+        if (idmap[r.athleteId] || !(r.starter || r.inMin != null)) continue;
+        const u = (report.unmatched = report.unmatched || {})[r.athleteId] = report.unmatched[r.athleteId] || { name: r.name, team: TEAMS[tIdx].short, jersey: r.jersey || null, pos: r.pos != null ? r.pos : null, apps: 0, min: 0, last: 0 };
+        const from = r.starter ? 0 : r.inMin, to = r.outMin != null ? Math.min(90, r.outMin) : 90;
+        u.apps++; u.min += Math.max(1, to - from);
+        if (m.kickoff > u.last) { u.last = m.kickoff; u.team = TEAMS[tIdx].short; if (r.name) u.name = r.name; if (r.jersey) u.jersey = r.jersey; if (r.pos != null) u.pos = r.pos; }
       }
       ms.push(m); report.matches++;
     }

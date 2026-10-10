@@ -76,8 +76,12 @@ async function main() {
     report.newFinished = out.report.finished;
     report.unmatchedPlayers = [...new Set(out.report.unmatchedPlayers)];
     // jugadores que juegan pero no están en el catálogo: se acumulan con sus minutos para agregarlos
-    const extra = read('unmatched.json', {});
-    for (const [id, u] of Object.entries(out.report.unmatched || {})) extra[id] = { ...(extra[id] || {}), ...u, seen: ((extra[id] && extra[id].seen) || 0) + 1 };
+    // en modo temporada se recalcula desde cero; en pasadas normales se suman los partidos nuevos
+    const extra = args.has('--season') ? {} : read('unmatched.json', {});
+    for (const [id, u] of Object.entries(out.report.unmatched || {})) {
+      const prev = extra[id] || { apps: 0, min: 0 };
+      extra[id] = { ...prev, ...u, apps: (args.has('--season') ? 0 : prev.apps) + u.apps, min: (args.has('--season') ? 0 : prev.min) + u.min };
+    }
     for (const id of Object.keys(extra)) if (out.idmap[id]) delete extra[id]; // ya identificado
     write('unmatched.json', extra);
     report.unknownTeams = out.report.unknownTeams;
