@@ -13,7 +13,15 @@ const ANCHOR = { date: '2026-10-10', fecha: 24 }; // la fecha 24 se juega el fin
 const args = new Set(process.argv.slice(2));
 
 const read = (f, def) => { try { return JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8')); } catch { return def; } };
-const write = (f, obj) => { fs.mkdirSync(path.dirname(path.join(DATA, f)), { recursive: true }); fs.writeFileSync(path.join(DATA, f), JSON.stringify(obj, null, 1) + '\n'); };
+// Solo escribe si cambió algo además de las marcas de tiempo (así no hay commits vacíos cada 30 minutos)
+const VOLATILE = new Set(['updatedAt', 'at', 'seconds', 'espnCalls']);
+const strip = o => JSON.stringify(o, (k, v) => (VOLATILE.has(k) ? undefined : v));
+const write = (f, obj) => {
+  const p = path.join(DATA, f);
+  try { if (strip(JSON.parse(fs.readFileSync(p, 'utf8'))) === strip(obj)) return; } catch {}
+  fs.mkdirSync(path.dirname(p), { recursive: true });
+  fs.writeFileSync(p, JSON.stringify(obj, null, 1) + '\n');
+};
 const dayStr = d => d.toISOString().slice(0, 10);
 
 function loadResults() {
