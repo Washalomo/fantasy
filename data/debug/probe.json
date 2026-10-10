@@ -1,0 +1,26 @@
+{
+ "at": "2026-10-10T00:16:34.753Z",
+ "tests": [
+  {
+   "name": "sofascore países",
+   "url": "https://api.sofascore.com/api/v1/sport/football/categories",
+   "status": 403,
+   "bytes": 48,
+   "summary": "Chile no aparece"
+  },
+  {
+   "name": "sofascore países",
+   "url": "https://www.sofascore.com/api/v1/sport/football/categories",
+   "status": 403,
+   "bytes": 48,
+   "summary": "Chile no aparece"
+  },
+  {
+   "name": "fotmob liga 273",
+   "url": "https://www.fotmob.com/api/leagues?id=273&ccode3=CHL",
+   "status": 404,
+   "bytes": 209128,
+   "sample": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\"><head><meta name=\"apple-itunes-app\" content=\"app-id=488575683\"/><link rel=\"alternate\" href=\"android-app://com.mobilefootie.wc2010/http\"/><link rel=\"apple-touch-icon\" href=\"/img/android-icon-192x192.png\"/><link rel=\"manifest\" href=\"/manifest.json\"/><link rel=\""
+  }
+ ]
+}
