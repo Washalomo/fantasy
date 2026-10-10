@@ -1,5 +1,5 @@
 {
- "at": "2026-10-09T23:58:16.936Z",
+ "at": "2026-10-10T00:00:32.719Z",
  "mode": "temporada",
  "errors": [
   "partido 401850416: goles del detalle (0-1) no cuadran con el marcador (3-0); se usan igual",
@@ -81,5 +81,5 @@
  "unknownTeams": [],
  "espnCalls": 650,
  "seasonGames": 175,
- "seconds": 83
+ "seconds": 68
 }

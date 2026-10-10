@@ -1,478 +1,614 @@
 {
  "99171": {
+  "apps": 2,
+  "min": 17,
   "name": "Maximiliano Fernández",
   "team": "ULC",
   "jersey": "30",
   "pos": null,
-  "seen": 1
+  "last": 1779035400000
  },
  "101764": {
+  "apps": 7,
+  "min": 530,
   "name": "Cristian Suárez",
   "team": "DCO",
   "jersey": "13",
   "pos": 1,
-  "seen": 2
+  "last": 1776988800000
  },
  "121092": {
+  "apps": 6,
+  "min": 540,
   "name": "Jorge Pinos",
   "team": "CSL",
   "jersey": "30",
   "pos": null,
-  "seen": 1
+  "last": 1777239000000
  },
  "152855": {
+  "apps": 21,
+  "min": 1770,
   "name": "Osvaldo González",
   "team": "UDC",
   "jersey": "4",
   "pos": 1,
-  "seen": 2
+  "last": 1790982000000
  },
  "179904": {
+  "apps": 3,
+  "min": 59,
   "name": "Matías Sepúlveda",
   "team": "CSL",
   "jersey": "21",
-  "pos": null,
-  "seen": 1
+  "pos": 3,
+  "last": 1779553800000
  },
  "208650": {
+  "apps": 3,
+  "min": 260,
   "name": "Maximiliano Gutiérrez",
   "team": "HUA",
   "jersey": "28",
   "pos": 2,
-  "seen": 2
+  "last": 1771016400000
  },
  "215531": {
+  "apps": 5,
+  "min": 285,
   "name": "Victor Campos",
   "team": "CSL",
   "jersey": "43",
   "pos": 1,
-  "seen": 1
+  "last": 1788822000000
  },
  "252606": {
+  "apps": 2,
+  "min": 10,
   "name": "Danilo Catalán",
   "team": "LIM",
   "jersey": "20",
   "pos": null,
-  "seen": 2
+  "last": 1771102800000
  },
  "253964": {
+  "apps": 13,
+  "min": 1053,
   "name": "Agustín Nadruz",
   "team": "CSL",
   "jersey": "5",
-  "pos": null,
-  "seen": 2
+  "pos": 2,
+  "last": 1785015000000
  },
  "258609": {
+  "apps": 8,
+  "min": 453,
   "name": "Ignacio Mesías",
   "team": "DCO",
   "jersey": "17",
-  "pos": null,
-  "seen": 2
+  "pos": 3,
+  "last": 1779062400000
  },
  "265861": {
+  "apps": 15,
+  "min": 1150,
   "name": "Francisco González",
   "team": "OHI",
   "jersey": "24",
   "pos": 2,
-  "seen": 2
+  "last": 1781827200000
  },
  "270586": {
+  "apps": 11,
+  "min": 676,
   "name": "Jonathan Andia",
   "team": "ULC",
   "jersey": "2",
-  "pos": null,
-  "seen": 1
+  "pos": 2,
+  "last": 1789428600000
  },
  "285042": {
+  "apps": 12,
+  "min": 912,
   "name": "Franco Calderon",
   "team": "UCH",
   "jersey": "2",
-  "pos": null,
-  "seen": 2
+  "pos": 1,
+  "last": 1785101400000
  },
  "285908": {
+  "apps": 1,
+  "min": 28,
   "name": "Vicente Ramírez",
   "team": "UCH",
   "jersey": "34",
   "pos": null,
-  "seen": 1
+  "last": 1776547800000
  },
  "292111": {
+  "apps": 2,
+  "min": 162,
   "name": "Mauricio Vera",
   "team": "DCO",
   "jersey": "6",
   "pos": 2,
-  "seen": 2
+  "last": 1770593400000
  },
  "297772": {
+  "apps": 15,
+  "min": 802,
   "name": "Lucas Assadi",
   "team": "UCH",
   "jersey": "10",
   "pos": 3,
-  "seen": 2
+  "last": 1786829400000
  },
  "302630": {
+  "apps": 8,
+  "min": 565,
   "name": "Tiago Galletto",
   "team": "LIM",
   "jersey": "27",
   "pos": 2,
-  "seen": 1
+  "last": 1789428600000
  },
  "302931": {
+  "apps": 11,
+  "min": 855,
   "name": "Renzo Malanca",
   "team": "HUA",
   "jersey": "13",
   "pos": 1,
-  "seen": 2
+  "last": 1786215600000
  },
  "315956": {
+  "apps": 11,
+  "min": 990,
   "name": "Rodrigo Cáceres",
   "team": "ULC",
   "jersey": "6",
   "pos": 1,
-  "seen": 2
+  "last": 1777068000000
  },
  "320580": {
+  "apps": 2,
+  "min": 12,
   "name": "Martin Ramirez",
   "team": "UDC",
   "jersey": "35",
   "pos": null,
-  "seen": 1
+  "last": 1775520000000
  },
  "328737": {
+  "apps": 20,
+  "min": 1035,
   "name": "Joaquín Soto",
   "team": "ULC",
   "jersey": "29",
   "pos": 2,
-  "seen": 2
+  "last": 1788716700000
  },
  "335211": {
+  "apps": 14,
+  "min": 1211,
   "name": "Esteban Matus",
   "team": "AUD",
   "jersey": "23",
   "pos": 1,
-  "seen": 2
+  "last": 1785101400000
  },
  "335212": {
+  "apps": 19,
+  "min": 1686,
   "name": "Daniel Piña",
   "team": "AUD",
   "jersey": "4",
   "pos": 1,
-  "seen": 2
+  "last": 1788568200000
  },
  "335239": {
+  "apps": 2,
+  "min": 111,
   "name": "Ignacio Fuenzalida",
   "team": "AUD",
   "jersey": "33",
-  "pos": null,
-  "seen": 1
+  "pos": 3,
+  "last": 1781308800000
  },
  "338444": {
+  "apps": 1,
+  "min": 1,
   "name": "Bastian Muñoz",
   "team": "NUB",
   "jersey": "36",
   "pos": null,
-  "seen": 1
+  "last": 1785092400000
  },
  "338864": {
+  "apps": 1,
+  "min": 2,
   "name": "Cristobal Chadwick",
   "team": "EVE",
   "jersey": "18",
   "pos": null,
-  "seen": 1
+  "last": 1775934000000
  },
  "343223": {
+  "apps": 3,
+  "min": 87,
   "name": "Byron Navarro",
   "team": "EVE",
   "jersey": "36",
   "pos": null,
-  "seen": 2
+  "last": 1771016400000
  },
  "345354": {
+  "apps": 1,
+  "min": 26,
   "name": "Jhon Cortes",
   "team": "UCH",
   "jersey": "13",
   "pos": null,
-  "seen": 1
+  "last": 1773522000000
  },
  "359156": {
+  "apps": 3,
+  "min": 58,
   "name": "Martín Cárcamo",
   "team": "EVE",
   "jersey": "13",
   "pos": null,
-  "seen": 1
+  "last": 1772377200000
  },
  "359981": {
+  "apps": 8,
+  "min": 267,
   "name": "Christian Mansilla",
   "team": "NUB",
   "jersey": "35",
   "pos": 2,
-  "seen": 1
+  "last": 1788708600000
  },
  "360439": {
+  "apps": 1,
+  "min": 78,
   "name": "Elias Rojas",
   "team": "UCH",
   "jersey": "16",
   "pos": 2,
-  "seen": 1
+  "last": 1781827200000
  },
  "364461": {
+  "apps": 2,
+  "min": 47,
   "name": "Bastián Escobar",
   "team": "DCO",
   "jersey": "39",
   "pos": 2,
-  "seen": 1
+  "last": 1776556800000
  },
  "365000": {
+  "apps": 6,
+  "min": 205,
   "name": "Santiago Londoño",
   "team": "EVE",
   "jersey": "22",
-  "pos": null,
-  "seen": 1
+  "pos": 3,
+  "last": 1781377200000
  },
  "372010": {
+  "apps": 1,
+  "min": 21,
   "name": "Benjamín Pérez",
   "team": "OHI",
   "jersey": "34",
   "pos": null,
-  "seen": 1
+  "last": 1785112200000
  },
  "381141": {
+  "apps": 5,
+  "min": 98,
   "name": "Joan Orellana",
   "team": "LSE",
   "jersey": "28",
   "pos": 1,
-  "seen": 1
+  "last": 1778889600000
  },
  "381680": {
+  "apps": 2,
+  "min": 53,
   "name": "Dixon Pereira",
   "team": "COQ",
   "jersey": "31",
-  "pos": null,
-  "seen": 1
+  "pos": 2,
+  "last": 1787781600000
  },
  "382919": {
+  "apps": 5,
+  "min": 237,
   "name": "Benjamin Moreno",
   "team": "CSL",
   "jersey": "28",
-  "pos": null,
-  "seen": 1
+  "pos": 2,
+  "last": 1777239000000
  },
  "383107": {
+  "apps": 1,
+  "min": 21,
   "name": "Luca Kmet",
   "team": "UDC",
   "jersey": "28",
   "pos": null,
-  "seen": 1
+  "last": 1777230000000
  },
  "385249": {
+  "apps": 6,
+  "min": 127,
   "name": "Bastián Contreras",
   "team": "LSE",
   "jersey": "15",
-  "pos": null,
-  "seen": 2
+  "pos": 3,
+  "last": 1779649200000
  },
  "385250": {
+  "apps": 1,
+  "min": 36,
   "name": "Daniel Cordero",
   "team": "LSE",
   "jersey": "25",
   "pos": null,
-  "seen": 2
+  "last": 1769979600000
  },
  "388813": {
+  "apps": 6,
+  "min": 224,
   "name": "Alvaro Abarzua",
   "team": "HUA",
   "jersey": "33",
-  "pos": null,
-  "seen": 1
+  "pos": 2,
+  "last": 1787013000000
  },
  "399321": {
+  "apps": 4,
+  "min": 279,
   "name": "José Movillo",
   "team": "OHI",
   "jersey": "27",
   "pos": 1,
-  "seen": 1
+  "last": 1785112200000
  },
  "399325": {
+  "apps": 3,
+  "min": 67,
   "name": "Sebastián Melgarejo",
   "team": "HUA",
   "jersey": "38",
-  "pos": null,
-  "seen": 1
+  "pos": 2,
+  "last": 1785706200000
  },
  "399328": {
+  "apps": 2,
+  "min": 64,
   "name": "Vicente Guzmán",
   "team": "NUB",
   "jersey": "27",
   "pos": 2,
-  "seen": 1
+  "last": 1789227000000
  },
  "399490": {
+  "apps": 4,
+  "min": 126,
   "name": "Zambrano",
   "team": "UDC",
   "jersey": "27",
-  "pos": null,
-  "seen": 2
+  "pos": 3,
+  "last": 1780101000000
  },
  "399505": {
+  "apps": 1,
+  "min": 15,
   "name": "Martín Guzmán",
   "team": "EVE",
   "jersey": "23",
   "pos": null,
-  "seen": 1
+  "last": 1770507000000
  },
  "401113": {
+  "apps": 7,
+  "min": 252,
   "name": "Ian Alegria",
   "team": "PAL",
   "jersey": "30",
-  "pos": null,
-  "seen": 1
+  "pos": 2,
+  "last": 1789254000000
  },
  "401126": {
+  "apps": 1,
+  "min": 27,
   "name": "Jose Hernandez",
   "team": "EVE",
   "jersey": "26",
   "pos": null,
-  "seen": 1
+  "last": 1787614200000
  },
  "401132": {
+  "apps": 3,
+  "min": 45,
   "name": "Amaro Leon",
   "team": "EVE",
   "jersey": "28",
   "pos": null,
-  "seen": 2
+  "last": 1772377200000
  },
  "402350": {
+  "apps": 1,
+  "min": 45,
   "name": "Nicolás Fuentes",
   "team": "DCO",
   "jersey": "31",
   "pos": 2,
-  "seen": 1
+  "last": 1788568200000
  },
  "405613": {
+  "apps": 4,
+  "min": 63,
   "name": "Joaquín Muñoz",
   "team": "OHI",
   "jersey": "13",
   "pos": null,
-  "seen": 1
+  "last": 1789340400000
  },
  "413810": {
+  "apps": 1,
+  "min": 72,
   "name": "Francisco Daza",
   "team": "UC",
   "jersey": "34",
   "pos": 1,
-  "seen": 1
+  "last": 1786149000000
  },
  "417683": {
+  "apps": 6,
+  "min": 347,
   "name": "Benjamín Sáez",
   "team": "UDC",
   "jersey": "32",
   "pos": 1,
-  "seen": 1
+  "last": 1788733800000
  },
  "418007": {
+  "apps": 1,
+  "min": 45,
   "name": "Joshua Arancibia",
   "team": "COQ",
   "jersey": "19",
   "pos": null,
-  "seen": 1
+  "last": 1788652800000
  },
  "418009": {
+  "apps": 4,
+  "min": 43,
   "name": "Milovan Velásquez",
   "team": "LSE",
   "jersey": "20",
   "pos": null,
-  "seen": 1
+  "last": 1785024000000
  },
  "418351": {
+  "apps": 1,
+  "min": 5,
   "name": "Benjamín Villarroel",
   "team": "CSL",
   "jersey": "3",
   "pos": null,
-  "seen": 1
+  "last": 1781386200000
  },
  "418357": {
+  "apps": 3,
+  "min": 66,
   "name": "Francisco Herrera",
   "team": "UDC",
   "jersey": "34",
   "pos": null,
-  "seen": 1
+  "last": 1776038400000
  },
  "418385": {
+  "apps": 3,
+  "min": 27,
   "name": "Bastian Sandoval",
   "team": "LSE",
   "jersey": "19",
   "pos": null,
-  "seen": 1
+  "last": 1773617400000
  },
  "418390": {
+  "apps": 5,
+  "min": 16,
   "name": "Albert Gómez",
   "team": "PAL",
   "jersey": "13",
   "pos": null,
-  "seen": 1
+  "last": 1789254000000
  },
  "418740": {
+  "apps": 7,
+  "min": 479,
   "name": "Vicente Zenteno",
   "team": "AUD",
   "jersey": "2",
   "pos": 1,
-  "seen": 1
+  "last": 1786406400000
  },
  "419020": {
+  "apps": 3,
+  "min": 92,
   "name": "Maximiliano Osorio",
   "team": "HUA",
   "jersey": "36",
   "pos": null,
-  "seen": 1
+  "last": 1781395200000
  },
  "419890": {
+  "apps": 1,
+  "min": 1,
   "name": "Benjamín Argandona",
   "team": "ULC",
   "jersey": "21",
   "pos": null,
-  "seen": 1
+  "last": 1775334600000
  },
  "420936": {
+  "apps": 1,
+  "min": 4,
   "name": "Martín Torrejón",
   "team": "HUA",
   "jersey": "51",
   "pos": null,
-  "seen": 1
+  "last": 1775520000000
  },
  "422262": {
+  "apps": 4,
+  "min": 32,
   "name": "Felipe Raipán",
   "team": "COL",
   "jersey": "50",
   "pos": null,
-  "seen": 1
+  "last": 1789331400000
  },
  "3099537": {
+  "apps": 1,
+  "min": 45,
   "name": "Martin Alonso Suazo Figueroa",
   "team": "UDC",
   "jersey": "36",
   "pos": 2,
-  "seen": 1
+  "last": 1786748400000
  },
  "3099649": {
+  "apps": 1,
+  "min": 5,
   "name": "Freddy Damian Alegria Moreno",
   "team": "HUA",
   "jersey": "53",
   "pos": null,
-  "seen": 1
+  "last": 1785706200000
  },
  "3102246": {
+  "apps": 1,
+  "min": 7,
   "name": "David Larrahondo Caicedo",
   "team": "HUA",
   "jersey": "52",
   "pos": null,
-  "seen": 1
+  "last": 1786215600000
  },
  "3112916": {
+  "apps": 1,
+  "min": 21,
   "name": "Juan Ignacio Poblete Miranda",
   "team": "OHI",
   "jersey": "38",
   "pos": null,
-  "seen": 1
+  "last": 1785112200000
  }
 }
