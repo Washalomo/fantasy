@@ -1,0 +1,185 @@
+{
+ "details": {
+  "id": 273,
+  "type": "league",
+  "name": "Liga de Primera",
+  "selectedSeason": "2026",
+  "latestSeason": "2026",
+  "shortName": "Liga de Primera",
+  "country": "CHI",
+  "gender": "male",
+  "nationalTeamId": 9762,
+  "faqJSONLD": null,
+  "breadcrumbJSONLD": {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.fotmob.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Liga de Primera",
+     "item": "https://www.fotmob.com/leagues/273/overview/liga-de-primera"
+    }
+   ]
+  },
+  "canSyncCalendar": true,
+  "hasFixtureDifficulty": true,
+  "leagueColor": "#E5C42E",
+  "dataProvider": "opta",
+  "seopath": "liga-de-primera"
+ },
+ "seasons": [
+  "2026",
+  "2025",
+  "2024",
+  "2023",
+  "2022",
+  "2021",
+  "2020",
+  "2019",
+  "2018",
+  "2017",
+  "2016/2017",
+  "2015/2016",
+  "2014/2015",
+  "2013/2014",
+  "2013",
+  "2012",
+  "2011",
+  "2010"
+ ],
+ "sample": [
+  {
+   "round": "1",
+   "roundName": 1,
+   "pageUrl": "/matches/audax-italiano-vs-universidad-de-chile/w08va#5140423",
+   "id": "5140423",
+   "home": {
+    "name": "Universidad de Chile",
+    "shortName": "Universidad de Chile",
+    "id": "6310"
+   },
+   "away": {
+    "name": "Audax Italiano",
+    "shortName": "Audax Italiano",
+    "id": "4058"
+   },
+   "status": {
+    "utcTime": "2026-01-30T23:00:00Z",
+    "timezone": "",
+    "finished": true,
+    "started": true,
+    "cancelled": false,
+    "awarded": false,
+    "scoreStr": "0 - 0",
+    "reason": {
+     "short": "FT",
+     "shortKey": "fulltime_short",
+     "long": "Full-Time",
+     "longKey": "finished"
+    }
+   }
+  },
+  {
+   "round": "1",
+   "roundName": 1,
+   "pageUrl": "/matches/colo-colo-vs-deportes-limache/28ofs29r#5140419",
+   "id": "5140419",
+   "home": {
+    "name": "Deportes Limache",
+    "shortName": "Deportes Limache",
+    "id": "584840"
+   },
+   "away": {
+    "name": "Colo Colo",
+    "shortName": "Colo Colo",
+    "id": "7815"
+   },
+   "status": {
+    "utcTime": "2026-01-31T15:00:00Z",
+    "timezone": "",
+    "finished": true,
+    "started": true,
+    "cancelled": false,
+    "awarded": false,
+    "scoreStr": "3 - 1",
+    "reason": {
+     "short": "FT",
+     "shortKey": "fulltime_short",
+     "long": "Full-Time",
+     "longKey": "finished"
+    }
+   }
+  },
+  {
+   "round": "21",
+   "roundName": 21,
+   "pageUrl": "/matches/huachipato-vs-coquimbo-unido/jmfe3#1000013215",
+   "id": "1000013215",
+   "home": {
+    "name": "Coquimbo Unido",
+    "shortName": "Coquimbo Unido",
+    "id": "4062"
+   },
+   "away": {
+    "name": "Huachipato",
+    "shortName": "Huachipato",
+    "id": "4056"
+   },
+   "status": {
+    "utcTime": "2026-09-16T21:00:00Z",
+    "timezone": "",
+    "finished": true,
+    "started": true,
+    "cancelled": false,
+    "awarded": false,
+    "scoreStr": "0 - 1",
+    "reason": {
+     "short": "FT",
+     "shortKey": "fulltime_short",
+     "long": "Full-Time",
+     "longKey": "finished"
+    }
+   }
+  },
+  {
+   "round": "23",
+   "roundName": 23,
+   "pageUrl": "/matches/universidad-de-concepcion-vs-huachipato/jl1ap#1000013235",
+   "id": "1000013235",
+   "home": {
+    "name": "Universidad de Concepción",
+    "shortName": "Universidad de Concepción",
+    "id": "4054"
+   },
+   "away": {
+    "name": "Huachipato",
+    "shortName": "Huachipato",
+    "id": "4056"
+   },
+   "status": {
+    "utcTime": "2026-10-02T23:00:00Z",
+    "timezone": "",
+    "finished": true,
+    "started": true,
+    "cancelled": false,
+    "awarded": false,
+    "scoreStr": "0 - 2",
+    "reason": {
+     "short": "FT",
+     "shortKey": "fulltime_short",
+     "long": "Full-Time",
+     "longKey": "finished"
+    }
+   }
+  }
+ ],
+ "total": 240,
+ "rounds": 30
+}
