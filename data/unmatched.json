@@ -8,33 +8,6 @@
   "pos": null,
   "last": 1779035400000
  },
- "101764": {
-  "apps": 7,
-  "min": 530,
-  "name": "Cristian Suárez",
-  "team": "DCO",
-  "jersey": "13",
-  "pos": 1,
-  "last": 1776988800000
- },
- "121092": {
-  "apps": 6,
-  "min": 540,
-  "name": "Jorge Pinos",
-  "team": "CSL",
-  "jersey": "30",
-  "pos": null,
-  "last": 1777239000000
- },
- "152855": {
-  "apps": 21,
-  "min": 1770,
-  "name": "Osvaldo González",
-  "team": "UDC",
-  "jersey": "4",
-  "pos": 1,
-  "last": 1790982000000
- },
  "179904": {
   "apps": 3,
   "min": 59,
@@ -44,24 +17,6 @@
   "pos": 3,
   "last": 1779553800000
  },
- "208650": {
-  "apps": 3,
-  "min": 260,
-  "name": "Maximiliano Gutiérrez",
-  "team": "HUA",
-  "jersey": "28",
-  "pos": 2,
-  "last": 1771016400000
- },
- "215531": {
-  "apps": 5,
-  "min": 285,
-  "name": "Victor Campos",
-  "team": "CSL",
-  "jersey": "43",
-  "pos": 1,
-  "last": 1788822000000
- },
  "252606": {
   "apps": 2,
   "min": 10,
@@ -70,51 +25,6 @@
   "jersey": "20",
   "pos": null,
   "last": 1771102800000
- },
- "253964": {
-  "apps": 13,
-  "min": 1053,
-  "name": "Agustín Nadruz",
-  "team": "CSL",
-  "jersey": "5",
-  "pos": 2,
-  "last": 1785015000000
- },
- "258609": {
-  "apps": 8,
-  "min": 453,
-  "name": "Ignacio Mesías",
-  "team": "DCO",
-  "jersey": "17",
-  "pos": 3,
-  "last": 1779062400000
- },
- "265861": {
-  "apps": 15,
-  "min": 1150,
-  "name": "Francisco González",
-  "team": "OHI",
-  "jersey": "24",
-  "pos": 2,
-  "last": 1781827200000
- },
- "270586": {
-  "apps": 11,
-  "min": 676,
-  "name": "Jonathan Andia",
-  "team": "ULC",
-  "jersey": "2",
-  "pos": 2,
-  "last": 1789428600000
- },
- "285042": {
-  "apps": 12,
-  "min": 912,
-  "name": "Franco Calderon",
-  "team": "UCH",
-  "jersey": "2",
-  "pos": 1,
-  "last": 1785101400000
  },
  "285908": {
   "apps": 1,
@@ -134,42 +44,6 @@
   "pos": 2,
   "last": 1770593400000
  },
- "297772": {
-  "apps": 15,
-  "min": 802,
-  "name": "Lucas Assadi",
-  "team": "UCH",
-  "jersey": "10",
-  "pos": 3,
-  "last": 1786829400000
- },
- "302630": {
-  "apps": 8,
-  "min": 565,
-  "name": "Tiago Galletto",
-  "team": "LIM",
-  "jersey": "27",
-  "pos": 2,
-  "last": 1789428600000
- },
- "302931": {
-  "apps": 11,
-  "min": 855,
-  "name": "Renzo Malanca",
-  "team": "HUA",
-  "jersey": "13",
-  "pos": 1,
-  "last": 1786215600000
- },
- "315956": {
-  "apps": 11,
-  "min": 990,
-  "name": "Rodrigo Cáceres",
-  "team": "ULC",
-  "jersey": "6",
-  "pos": 1,
-  "last": 1777068000000
- },
  "320580": {
   "apps": 2,
   "min": 12,
@@ -178,33 +52,6 @@
   "jersey": "35",
   "pos": null,
   "last": 1775520000000
- },
- "328737": {
-  "apps": 20,
-  "min": 1035,
-  "name": "Joaquín Soto",
-  "team": "ULC",
-  "jersey": "29",
-  "pos": 2,
-  "last": 1788716700000
- },
- "335211": {
-  "apps": 14,
-  "min": 1211,
-  "name": "Esteban Matus",
-  "team": "AUD",
-  "jersey": "23",
-  "pos": 1,
-  "last": 1785101400000
- },
- "335212": {
-  "apps": 19,
-  "min": 1686,
-  "name": "Daniel Piña",
-  "team": "AUD",
-  "jersey": "4",
-  "pos": 1,
-  "last": 1788568200000
  },
  "335239": {
   "apps": 2,
@@ -260,15 +107,6 @@
   "pos": null,
   "last": 1772377200000
  },
- "359981": {
-  "apps": 8,
-  "min": 267,
-  "name": "Christian Mansilla",
-  "team": "NUB",
-  "jersey": "35",
-  "pos": 2,
-  "last": 1788708600000
- },
  "360439": {
   "apps": 1,
   "min": 78,
@@ -286,15 +124,6 @@
   "jersey": "39",
   "pos": 2,
   "last": 1776556800000
- },
- "365000": {
-  "apps": 6,
-  "min": 205,
-  "name": "Santiago Londoño",
-  "team": "EVE",
-  "jersey": "22",
-  "pos": 3,
-  "last": 1781377200000
  },
  "372010": {
   "apps": 1,
@@ -323,15 +152,6 @@
   "pos": 2,
   "last": 1787781600000
  },
- "382919": {
-  "apps": 5,
-  "min": 237,
-  "name": "Benjamin Moreno",
-  "team": "CSL",
-  "jersey": "28",
-  "pos": 2,
-  "last": 1777239000000
- },
  "383107": {
   "apps": 1,
   "min": 21,
@@ -358,24 +178,6 @@
   "jersey": "25",
   "pos": null,
   "last": 1769979600000
- },
- "388813": {
-  "apps": 6,
-  "min": 224,
-  "name": "Alvaro Abarzua",
-  "team": "HUA",
-  "jersey": "33",
-  "pos": 2,
-  "last": 1787013000000
- },
- "399321": {
-  "apps": 4,
-  "min": 279,
-  "name": "José Movillo",
-  "team": "OHI",
-  "jersey": "27",
-  "pos": 1,
-  "last": 1785112200000
  },
  "399325": {
   "apps": 3,
@@ -412,15 +214,6 @@
   "jersey": "23",
   "pos": null,
   "last": 1770507000000
- },
- "401113": {
-  "apps": 7,
-  "min": 252,
-  "name": "Ian Alegria",
-  "team": "PAL",
-  "jersey": "30",
-  "pos": 2,
-  "last": 1789254000000
  },
  "401126": {
   "apps": 1,
@@ -466,15 +259,6 @@
   "jersey": "34",
   "pos": 1,
   "last": 1786149000000
- },
- "417683": {
-  "apps": 6,
-  "min": 347,
-  "name": "Benjamín Sáez",
-  "team": "UDC",
-  "jersey": "32",
-  "pos": 1,
-  "last": 1788733800000
  },
  "418007": {
   "apps": 1,
@@ -529,15 +313,6 @@
   "jersey": "13",
   "pos": null,
   "last": 1789254000000
- },
- "418740": {
-  "apps": 7,
-  "min": 479,
-  "name": "Vicente Zenteno",
-  "team": "AUD",
-  "jersey": "2",
-  "pos": 1,
-  "last": 1786406400000
  },
  "419020": {
   "apps": 3,
