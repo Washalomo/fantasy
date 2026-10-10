@@ -69,12 +69,15 @@ const keep = (t, f) => { if (t.json) { try { t.summary = f(t.json); } catch (e) 
     const all = (fm.json.fixtures && fm.json.fixtures.allMatches) || (fm.json.matches && fm.json.matches.allMatches) || [];
     const fin = all.filter(m => m.status && m.status.finished);
     mid = fin.length ? fin[fin.length - 1].id : null;
+    const dbg = path.join(__dirname, '..', 'data', 'debug'); fs.mkdirSync(dbg, { recursive: true });
+    fs.writeFileSync(path.join(dbg, 'fotmob-league.json'), JSON.stringify({ details: fm.json.details, seasons: fm.json.allAvailableSeasons, sample: all.slice(0, 2).concat(fin.slice(-2)), total: all.length, rounds: [...new Set(all.map(m => m.round))].length }, null, 1));
     keep(fm, j => ({ nombre: j.details && j.details.name, pais: j.details && j.details.country, partidos: all.length, ultimo: fin.length ? `${fin[fin.length - 1].id} ${fin[fin.length - 1].home.name} ${fin[fin.length - 1].status.scoreStr} ${fin[fin.length - 1].away.name}` : null, claves: Object.keys(j) }));
   }
   if (mid) {
     for (const u of [`https://www.fotmob.com/api/data/matchDetails?matchId=${mid}`, `https://www.fotmob.com/api/matchDetails?matchId=${mid}`]) {
       const md = await get('fotmob detalle de partido', u);
       if (md.sample) md.sample = md.sample.slice(0, 160);
+      if (md.json) fs.writeFileSync(path.join(__dirname, '..', 'data', 'debug', 'fotmob-match.json'), JSON.stringify(md.json, null, 1));
       keep(md, j => {
         const ps = j.content && j.content.playerStats;
         if (!ps) return { claves: Object.keys(j.content || j) };
