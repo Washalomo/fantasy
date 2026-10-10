@@ -145,9 +145,30 @@ const Espn = (() => {
         s.pkm = (cardsBy[pid] || []).filter(c => c.type === 'missed_penalty').length;
         s.gc = goals.filter(g => scoredFor(g) === opp && g.t >= from && g.t <= to).length;
         if (x && x.goalsConceded != null && pos === 0) s.gc = Number(x.goalsConceded) || 0;
-        stats[pid] = { pos, s };
+        stats[pid] = { pos, s, rating: null };
       }
     }
+    // detalle de FotMob (Opta): completa la tabla de LaLiga y la nota del partido para los Puntos Plus
+    const det = m.detail || {};
+    for (const [pid, d] of Object.entries(det)) {
+      let e = stats[pid];
+      if (!e) {
+        // jugó según FotMob pero ESPN no lo trae en la planilla
+        const p = PLAYERS_RAW.find(x => x[0] === pid); if (!p || !d.min) continue;
+        const s = Core.blankStats(); s.min = Math.min(90, d.min); s.g = d.g;
+        const opp = d.team === m.h ? m.a : m.h;
+        s.gc = s.min >= 60 ? goals.filter(g => scoredFor(g) === opp).length : 0;
+        e = stats[pid] = { pos: p[3], s, rating: null };
+      }
+      const s = e.s;
+      s.a = Math.max(s.a, d.a);
+      s.kp = Math.max(0, d.chances - d.a);
+      s.sot = Math.max(s.sot, d.sot, s.g);
+      s.drb = d.drb; s.box = d.crosses; s.rec = d.rec; s.clr = d.clr; s.lost = d.disp;
+      if (e.pos === 0) { s.sav = d.sav; if (d.gc != null) s.gc = d.gc; }
+      e.rating = d.rating;
+    }
+    if (m.detail) report.detailed = (report.detailed || 0) + 1;
     // gol ganador
     if (m.hg !== m.ag) {
       const w = m.hg > m.ag ? m.h : m.a, need = Math.min(m.hg, m.ag);
@@ -156,7 +177,7 @@ const Espn = (() => {
       if (g && !g.own && g.pid && stats[g.pid]) stats[g.pid].s.win = 1;
     }
     const out = {};
-    for (const [pid, { pos, s }] of Object.entries(stats)) { const f = Core.finalize(pos, s); out[pid] = Core.STAT_KEYS.map(k => f[k]); }
+    for (const [pid, { pos, s, rating }] of Object.entries(stats)) { const f = Core.finalize(pos, s, rating); out[pid] = Core.STAT_KEYS.map(k => f[k]); }
     return out;
   }
 
@@ -202,6 +223,17 @@ const Espn = (() => {
         const from = r.starter ? 0 : r.inMin, to = r.outMin != null ? Math.min(90, r.outMin) : 90;
         u.apps++; u.min += Math.max(1, to - from);
         if (m.kickoff > u.last) { u.last = m.kickoff; u.team = TEAMS[tIdx].short; if (r.name) u.name = r.name; if (r.jersey) u.jersey = r.jersey; if (r.pos != null) u.pos = r.pos; }
+      }
+      // detalle FotMob del mismo partido: jugadores identificados por nombre y dorsal
+      if (raw.detail && raw.detail.players) {
+        m.detail = {};
+        for (const d of raw.detail.players) {
+          const tIdx = d.side === 'home' ? h : d.side === 'away' ? a : null;
+          if (tIdx == null) continue;
+          const c = resolve(tIdx, d.name, d.shirt);
+          if (c) m.detail[c.id] = { ...d, team: tIdx };
+          else if (d.min >= 20) report.unmatchedPlayers.push(`${d.name} (${TEAMS[tIdx].short}, FotMob)`);
+        }
       }
       ms.push(m); report.matches++;
     }

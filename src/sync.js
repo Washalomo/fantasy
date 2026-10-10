@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { Core, Espn, PLAYERS_RAW, EXP } = require('./env');
 const api = require('./espn-api');
+const fm = require('./fotmob-api');
 const { seasonPrices } = require('./season');
 
 const DATA = process.env.DATA_DIR || path.join(__dirname, '..', 'data');
@@ -14,7 +15,7 @@ const args = new Set(process.argv.slice(2));
 
 const read = (f, def) => { try { return JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8')); } catch { return def; } };
 // Solo escribe si cambió algo además de las marcas de tiempo (así no hay commits vacíos cada 30 minutos)
-const VOLATILE = new Set(['updatedAt', 'at', 'seconds', 'espnCalls']);
+const VOLATILE = new Set(['updatedAt', 'at', 'seconds', 'espnCalls', 'leidos']);
 const strip = o => JSON.stringify(o, (k, v) => (VOLATILE.has(k) ? undefined : v));
 const write = (f, obj) => {
   const p = path.join(DATA, f);
@@ -57,11 +58,38 @@ async function main() {
       catch (e) { report.errors.push(`día ${d}: ${e.message}`); }
       await api.sleep(150);
     }
+    // 2b) detalle FotMob (pases clave, regates, recuperaciones, despejes, nota) de los partidos terminados
+    const detailOf = {}, freshDetail = new Set();
+    try {
+      const fmList = await fm.leagueMatches();
+      const near = (ev, x) => Math.abs(x.utc - Date.parse(ev.date)) < 3 * 864e5;
+      let fetched = 0;
+      for (const ev of events) {
+        if (ev.status !== 'post') continue;
+        const f = `detail/${ev.id}.json`;
+        const cached = read(f, null);
+        const h = Espn.teamIndex(ev.home.name), a = Espn.teamIndex(ev.away.name);
+        const x = fmList.find(x => x.finished && Espn.teamIndex(x.home) === h && Espn.teamIndex(x.away) === a && near(ev, x));
+        if (!x) { if (cached) detailOf[ev.id] = cached; else report.errors.push(`FotMob: no encontré ${ev.home.name}–${ev.away.name}`); continue; }
+        // se vuelve a leer si se guardó muy cerca del final (las notas y estadísticas se corrigen después)
+        const stale = !cached || cached.fotmobId !== x.id || !(cached.leido > Date.parse(ev.date) + 4 * 3600e3);
+        if (!stale) { detailOf[ev.id] = cached; continue; }
+        try {
+          const d = await fm.matchDetail(x.id);
+          if (!d.players.length) throw new Error('sin estadísticas por jugador');
+          const doc = { fotmobId: x.id, leido: Date.now(), players: d.players };
+          write(f, doc); detailOf[ev.id] = doc; freshDetail.add(ev.id); fetched++;
+        } catch (e) { report.errors.push(`FotMob ${x.id}: ${e.message}`); if (cached) detailOf[ev.id] = cached; }
+        await fm.sleep(250);
+      }
+      report.fotmob = { partidos: fmList.length, leidos: fetched, conDetalle: Object.keys(detailOf).length };
+    } catch (e) { report.errors.push(`FotMob: ${e.message}`); }
+
     // 3) detalle de los partidos terminados que faltan
     const input = [];
     let sampled = fs.existsSync(path.join(DATA, 'debug/summary.json'));
     for (const ev of events) {
-      if (ev.status !== 'post' || (done.has(ev.id) && !args.has('--season'))) { input.push(ev); continue; }
+      if (ev.status !== 'post' || (done.has(ev.id) && !args.has('--season') && !freshDetail.has(ev.id))) { input.push(ev); continue; }
       const goalsH = ev.details.filter(d => (d.type === 'goal' || d.type === 'penalty_goal' || d.type === 'own_goal') && d.teamId === ev.home.teamId).length;
       const goalsA = ev.details.filter(d => (d.type === 'goal' || d.type === 'penalty_goal' || d.type === 'own_goal') && d.teamId === ev.away.teamId).length;
       if (goalsH !== ev.home.score || goalsA !== ev.away.score) report.errors.push(`partido ${ev.id}: goles del detalle (${goalsH}-${goalsA}) no cuadran con el marcador (${ev.home.score}-${ev.away.score}); se usan igual`);
@@ -69,6 +97,7 @@ async function main() {
         const full = await api.fullMatch(ev);
         if (!sampled) { write('debug/summary.json', full._raw.summary); sampled = true; }
         delete full._raw;
+        if (detailOf[ev.id]) full.detail = detailOf[ev.id];
         input.push(full);
       } catch (e) { report.errors.push(`partido ${ev.id}: ${e.message}`); input.push({ ...ev, status: 'in' }); }
       await api.sleep(150);
@@ -93,6 +122,7 @@ async function main() {
     for (const id of Object.keys(extra)) if (out.idmap[id]) delete extra[id]; // ya identificado
     write('unmatched.json', extra);
     report.unknownTeams = out.report.unknownTeams;
+    report.detailedMatches = out.report.detailed || 0;
     report.espnCalls = api.calls();
   }
   // 5) rendimiento de la temporada y precios

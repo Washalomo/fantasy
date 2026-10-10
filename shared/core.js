@@ -93,14 +93,19 @@ const Core = (() => {
     if (pos === 0) add('Paradas', Math.floor(s.sav / 2));
     add('Remates a puerta', Math.floor(s.sot / 2));
     add('Regates', Math.floor(s.drb / 2));
-    add('Llegadas al área', Math.floor(s.box / 2));
+    add('Balones al área', Math.floor(s.box / 2));
     add('Recuperaciones', Math.floor(s.rec / 5));
     add('Despejes', Math.floor(s.clr / 3));
     add('Balones perdidos', -Math.floor(s.lost / [8, 8, 10, 12][pos]));
     add('Puntos Plus', s.plus);
     return [d.reduce((t, [, v]) => t + v, 0), d];
   }
-  function finalize(pos, s) { s.plus = plusPoints(pos, s); s.pts = score(pos, s)[0]; return s; }
+  // Con nota del partido (FotMob/Opta, 0–10) los Puntos Plus salen de la nota, como los Puntos DAZN
+  function plusFromRating(r) { return r == null ? null : r >= 8.7 ? 4 : r >= 7.8 ? 3 : r >= 7.0 ? 2 : r >= 6.2 ? 1 : 0; }
+  function finalize(pos, s, rating) {
+    const pr = s.min > 0 ? plusFromRating(rating) : null;
+    s.plus = pr != null ? pr : plusPoints(pos, s); s.pts = score(pos, s)[0]; return s;
+  }
 
   // ---------- Adaptador API-Football (/fixtures/players + /fixtures/events) ----------
   // st: response[].players[].statistics[0]. ctx: { gc: goles recibidos con el jugador en cancha, win: 1 si marcó el gol ganador }
@@ -285,7 +290,7 @@ const Core = (() => {
 
   return {
     POS, POS_LONG, FORMATIONS, DEFAULTS, MIN_VALUE, STAT_KEYS, clamp, round10k,
-    hashStr, rng, normal, valueFor, expectedPts, blankStats, plusPoints, score, finalize, BASIC_SCALE, REAL_SCALE, realFechas, realState, normalizeResult,
+    hashStr, rng, normal, valueFor, expectedPts, blankStats, plusPoints, plusFromRating, score, finalize, BASIC_SCALE, REAL_SCALE, realFechas, realState, normalizeResult,
     posFromApi, fromApiFootball, matchContext, estimateFromSeason, priceStep,
     jornadaAt, nextJornada, playedJornadas, clauseOf, initialClause, raisedClause, clauseLocked, clauseBlock, shieldBlock, spendLimit, leagueOffer,
   };

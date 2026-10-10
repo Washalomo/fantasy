@@ -27,10 +27,21 @@ const CORE = {
   '4137': { entries: [{ playerId: 149759, jersey: '33', starter: true }, { playerId: 253929, jersey: '23', starter: true, subbedOut: { didSub: true, clock: { displayValue: "82'" } } }, { playerId: 336564, jersey: '31', starter: true }, { playerId: 204911, jersey: '6', starter: false, subbedIn: { didSub: true, clock: { displayValue: "82'" } } }] },
   '4139': { entries: [{ playerId: 201316, jersey: '25', starter: true }, { playerId: 345276, jersey: '28', starter: true }, { playerId: 205198, jersey: '17', starter: true }, { playerId: 167681, jersey: '3', starter: false, subbedIn: { didSub: true, clock: { value: 4440, displayValue: "74'" } } }] },
 };
+// FotMob: el mismo partido La Serena–U. de Chile con estadísticas Opta
+const fst = (key, value) => ({ key, stat: { value } });
+const fp = (name, shirt, teamId, gk, o) => ({ name, shirtNumber: shirt, teamId, isGoalkeeper: gk, stats: [{ title: 'Top stats', stats: Object.fromEntries(Object.entries(o).map(([k, v]) => [k, fst(k, v)])) }] });
+const FM_LEAGUE = { details: { id: 273 }, fixtures: { allMatches: [{ id: '4800001', home: { name: 'Deportes La Serena' }, away: { name: 'Universidad de Chile' }, status: { utcTime: '2026-09-13T18:00:00Z', finished: true } }] } };
+const FM_MATCH = { general: { matchId: '4800001', homeTeam: { id: 10, name: 'Deportes La Serena' }, awayTeam: { id: 20, name: 'Universidad de Chile' } }, content: { playerStats: {
+  a: fp('Gabriel Castellón', '25', 20, true, { rating_title: 7.9, minutes_played: 90, saves: 3, goals_conceded: 0 }),
+  b: fp('Fabián Hormazábal', '17', 20, false, { rating_title: 8.4, minutes_played: 90, goals: 1, assists: 1, chances_created: 3, dribbles_succeeded: 2, accurate_crosses: 2, recoveries: 6, ShotsOnTarget: 2 }),
+  c: fp('Rafael Delgado', '33', 10, false, { rating_title: 5.9, minutes_played: 90, recoveries: 5, clearances: 6, dispossessed: 1 }),
+  d: fp('Suplente', '40', 10, false, { minutes_played: 0 }) } } };
 global.fetch = async (url) => {
   let body = null;
   const u = String(url);
-  if (/scoreboard\?dates=(\d+)/.test(u)) body = DAYS[u.match(/dates=(\d+)/)[1]] || { events: [] };
+  if (/fotmob\.com\/api\/data\/leagues/.test(u)) body = FM_LEAGUE;
+  else if (/fotmob\.com\/api\/data\/matchDetails/.test(u)) body = FM_MATCH;
+  else if (/scoreboard\?dates=(\d+)/.test(u)) body = DAYS[u.match(/dates=(\d+)/)[1]] || { events: [] };
   else if (/scoreboard$/.test(u)) body = { leagues: [{ calendar: ['2026-09-13T07:00Z', '2026-10-10T07:00Z'] }], events: [] };
   else if (/summary\?event=/.test(u)) body = SUMMARY;
   else if (/competitors\/(\d+)\/roster/.test(u)) body = CORE[u.match(/competitors\/(\d+)\/roster/)[1]];
