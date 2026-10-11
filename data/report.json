@@ -1,22 +1,19 @@
 {
- "at": "2026-10-11T06:21:41.721Z",
+ "at": "2026-10-11T13:26:28.051Z",
  "mode": "normal",
  "errors": [],
  "days": 9,
  "fotmob": {
   "partidos": 240,
-  "leidos": 1,
+  "leidos": 0,
   "conDetalle": 2
  },
  "matches": 24,
- "newFinished": 1,
- "unmatchedPlayers": [
-  "Benjamín Pérez (OHI)",
-  "Benjamin Pérez (OHI, FotMob)"
- ],
+ "newFinished": 0,
+ "unmatchedPlayers": [],
  "unknownTeams": [],
- "detailedMatches": 1,
- "espnCalls": 13,
+ "detailedMatches": 0,
+ "espnCalls": 10,
  "seasonGames": 177,
- "seconds": 14
+ "seconds": 3
 }
