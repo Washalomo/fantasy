@@ -1,21 +1,23 @@
 {
- "at": "2026-10-10T20:40:26.974Z",
+ "at": "2026-10-11T00:11:57.145Z",
  "mode": "normal",
  "errors": [],
- "days": 8,
+ "days": 9,
  "fotmob": {
   "partidos": 240,
-  "leidos": 1,
-  "conDetalle": 1
+  "leidos": 2,
+  "conDetalle": 2
  },
- "matches": 16,
- "newFinished": 1,
+ "matches": 24,
+ "newFinished": 2,
  "unmatchedPlayers": [
-  "Martín Espinoza (CSL, FotMob)"
+  "Martín Espinoza (CSL, FotMob)",
+  "Benjamín Pérez (OHI)",
+  "Benjamin Pérez (OHI, FotMob)"
  ],
  "unknownTeams": [],
- "detailedMatches": 1,
- "espnCalls": 12,
- "seasonGames": 176,
- "seconds": 4
+ "detailedMatches": 2,
+ "espnCalls": 16,
+ "seasonGames": 177,
+ "seconds": 5
 }
