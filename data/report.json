@@ -1,22 +1,19 @@
 {
- "at": "2026-10-12T01:42:19.344Z",
+ "at": "2026-10-12T09:04:08.769Z",
  "mode": "normal",
  "errors": [],
  "days": 9,
  "fotmob": {
   "partidos": 240,
-  "leidos": 2,
+  "leidos": 1,
   "conDetalle": 6
  },
  "matches": 24,
- "newFinished": 2,
- "unmatchedPlayers": [
-  "Maximiliano Fernández (ULC)",
-  "Maximiliano Fernández (ULC, FotMob)"
- ],
+ "newFinished": 1,
+ "unmatchedPlayers": [],
  "unknownTeams": [],
- "detailedMatches": 2,
- "espnCalls": 16,
+ "detailedMatches": 1,
+ "espnCalls": 13,
  "seasonGames": 181,
  "seconds": 6
 }
