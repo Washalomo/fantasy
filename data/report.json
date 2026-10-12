@@ -1,21 +1,22 @@
 {
- "at": "2026-10-11T22:24:12.950Z",
+ "at": "2026-10-12T01:42:19.344Z",
  "mode": "normal",
  "errors": [],
  "days": 9,
  "fotmob": {
   "partidos": 240,
   "leidos": 2,
-  "conDetalle": 4
+  "conDetalle": 6
  },
  "matches": 24,
  "newFinished": 2,
  "unmatchedPlayers": [
-  "Felipe Raipán (COL)"
+  "Maximiliano Fernández (ULC)",
+  "Maximiliano Fernández (ULC, FotMob)"
  ],
  "unknownTeams": [],
  "detailedMatches": 2,
  "espnCalls": 16,
- "seasonGames": 179,
- "seconds": 5
+ "seasonGames": 181,
+ "seconds": 6
 }
