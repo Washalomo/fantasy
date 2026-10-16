@@ -1,19 +1,21 @@
 {
- "at": "2026-10-16T04:21:13.552Z",
+ "at": "2026-10-16T14:11:22.531Z",
  "mode": "normal",
- "errors": [],
+ "errors": [
+  "día 2026-10-26: https://site.api.espn.com/apis/site/v2/sports/soccer/chi.1/scoreboard?dates=20261026: The operation was aborted due to timeout"
+ ],
  "days": 7,
  "fotmob": {
   "partidos": 240,
   "leidos": 0,
   "conDetalle": 0
  },
- "matches": 16,
+ "matches": 15,
  "newFinished": 0,
  "unmatchedPlayers": [],
  "unknownTeams": [],
  "detailedMatches": 0,
- "espnCalls": 8,
+ "espnCalls": 10,
  "seasonGames": 182,
- "seconds": 3
+ "seconds": 65
 }
