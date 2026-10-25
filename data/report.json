@@ -1,21 +1,19 @@
 {
- "at": "2026-10-25T17:48:54.618Z",
+ "at": "2026-10-25T20:44:23.846Z",
  "mode": "normal",
- "errors": [
-  "FotMob: no encontré Ñublense–Coquimbo Unido"
- ],
+ "errors": [],
  "days": 11,
  "fotmob": {
   "partidos": 240,
-  "leidos": 0,
-  "conDetalle": 3
+  "leidos": 2,
+  "conDetalle": 5
  },
  "matches": 25,
- "newFinished": 1,
+ "newFinished": 2,
  "unmatchedPlayers": [],
  "unknownTeams": [],
- "detailedMatches": 0,
- "espnCalls": 15,
- "seasonGames": 186,
- "seconds": 4
+ "detailedMatches": 2,
+ "espnCalls": 18,
+ "seasonGames": 187,
+ "seconds": 5
 }
