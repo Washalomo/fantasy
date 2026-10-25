@@ -1,19 +1,22 @@
 {
- "at": "2026-10-25T20:44:23.846Z",
+ "at": "2026-10-25T23:10:12.893Z",
  "mode": "normal",
  "errors": [],
  "days": 11,
  "fotmob": {
   "partidos": 240,
   "leidos": 2,
-  "conDetalle": 5
+  "conDetalle": 6
  },
  "matches": 25,
  "newFinished": 2,
- "unmatchedPlayers": [],
+ "unmatchedPlayers": [
+  "G Díaz (COL)",
+  "Gedeón Díaz (COL, FotMob)"
+ ],
  "unknownTeams": [],
  "detailedMatches": 2,
  "espnCalls": 18,
- "seasonGames": 187,
+ "seasonGames": 188,
  "seconds": 5
 }
