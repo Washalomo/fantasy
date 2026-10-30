@@ -1,8 +1,8 @@
 {
- "at": "2026-10-30T00:15:34.450Z",
+ "at": "2026-10-30T13:28:21.630Z",
  "mode": "normal",
  "errors": [],
- "days": 7,
+ "days": 10,
  "fotmob": {
   "partidos": 240,
   "leidos": 0,
@@ -13,7 +13,7 @@
  "unmatchedPlayers": [],
  "unknownTeams": [],
  "detailedMatches": 0,
- "espnCalls": 8,
+ "espnCalls": 11,
  "seasonGames": 191,
- "seconds": 2
+ "seconds": 4
 }
