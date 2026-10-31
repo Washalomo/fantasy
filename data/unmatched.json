@@ -1,12 +1,12 @@
 {
  "99171": {
-  "apps": 3,
-  "min": 62,
+  "apps": 4,
+  "min": 126,
   "name": "Maximiliano Fernández",
   "team": "ULC",
   "jersey": "30",
-  "pos": null,
-  "last": 1791750600000
+  "pos": 2,
+  "last": 1793397600000
  },
  "179904": {
   "apps": 3,
@@ -288,13 +288,13 @@
   "last": 1781386200000
  },
  "418357": {
-  "apps": 3,
-  "min": 66,
+  "apps": 4,
+  "min": 75,
   "name": "Francisco Herrera",
   "team": "UDC",
   "jersey": "34",
   "pos": null,
-  "last": 1776038400000
+  "last": 1793397600000
  },
  "418385": {
   "apps": 3,
@@ -387,12 +387,12 @@
   "last": 1785112200000
  },
  "3142611": {
-  "apps": 2,
-  "min": 144,
+  "apps": 3,
+  "min": 234,
   "name": "G Díaz",
   "team": "COL",
   "jersey": "54",
-  "pos": 2,
-  "last": 1792960200000
+  "pos": null,
+  "last": 1793397600000
  }
 }
