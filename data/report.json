@@ -1,23 +1,23 @@
 {
- "at": "2026-11-01T20:47:16.496Z",
+ "at": "2026-11-02T00:36:14.676Z",
  "mode": "normal",
  "errors": [],
- "days": 10,
+ "days": 8,
  "fotmob": {
   "partidos": 240,
-  "leidos": 3,
+  "leidos": 1,
   "conDetalle": 6
  },
  "matches": 24,
- "newFinished": 3,
+ "newFinished": 1,
  "unmatchedPlayers": [
   "Amaro Leon (EVE)",
   "Bastián Ismael Tapia Gomes (EVE)",
   "Martín Espinoza (CSL, FotMob)"
  ],
  "unknownTeams": [],
- "detailedMatches": 3,
- "espnCalls": 20,
+ "detailedMatches": 1,
+ "espnCalls": 12,
  "seasonGames": 197,
- "seconds": 6
+ "seconds": 4
 }
