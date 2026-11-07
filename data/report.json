@@ -1,19 +1,21 @@
 {
- "at": "2026-11-07T00:16:39.445Z",
+ "at": "2026-11-07T22:14:51.333Z",
  "mode": "normal",
  "errors": [],
  "days": 6,
  "fotmob": {
   "partidos": 240,
-  "leidos": 0,
-  "conDetalle": 0
+  "leidos": 1,
+  "conDetalle": 1
  },
  "matches": 16,
- "newFinished": 0,
- "unmatchedPlayers": [],
+ "newFinished": 1,
+ "unmatchedPlayers": [
+  "Milovan Velásquez (LSE)"
+ ],
  "unknownTeams": [],
- "detailedMatches": 0,
- "espnCalls": 7,
- "seasonGames": 199,
- "seconds": 2
+ "detailedMatches": 1,
+ "espnCalls": 10,
+ "seasonGames": 200,
+ "seconds": 4
 }
