@@ -1,26 +1,23 @@
 {
- "at": "2026-11-08T20:24:36.944Z",
+ "at": "2026-11-08T23:58:04.120Z",
  "mode": "normal",
  "errors": [],
  "days": 7,
  "fotmob": {
   "partidos": 240,
-  "leidos": 4,
-  "conDetalle": 6
+  "leidos": 3,
+  "conDetalle": 7
  },
  "matches": 24,
- "newFinished": 4,
+ "newFinished": 3,
  "unmatchedPlayers": [
-  "Dixon Pereira (COQ)",
-  "Ythans Emilio Blanco Aguilera (COQ)",
-  "Dixon Pereira (COQ, FotMob)",
-  "Ythans Blanco (COQ, FotMob)",
   "G Díaz (COL)",
-  "Gedeón Díaz (COL, FotMob)"
+  "Gedeón Díaz (COL, FotMob)",
+  "Maximiliano Fernández (ULC)"
  ],
  "unknownTeams": [],
- "detailedMatches": 4,
- "espnCalls": 20,
- "seasonGames": 205,
- "seconds": 5
+ "detailedMatches": 3,
+ "espnCalls": 17,
+ "seasonGames": 206,
+ "seconds": 4
 }

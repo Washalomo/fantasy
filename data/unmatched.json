@@ -1,12 +1,12 @@
 {
  "99171": {
-  "apps": 4,
-  "min": 126,
+  "apps": 5,
+  "min": 135,
   "name": "Maximiliano Fernández",
   "team": "ULC",
   "jersey": "30",
-  "pos": 2,
-  "last": 1793397600000
+  "pos": null,
+  "last": 1794169800000
  },
  "179904": {
   "apps": 3,
@@ -396,8 +396,8 @@
   "last": 1794151800000
  },
  "3142611": {
-  "apps": 4,
-  "min": 292,
+  "apps": 5,
+  "min": 350,
   "name": "G Díaz",
   "team": "COL",
   "jersey": "54",
