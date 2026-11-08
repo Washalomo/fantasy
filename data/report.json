@@ -1,21 +1,21 @@
 {
- "at": "2026-11-07T22:14:51.333Z",
+ "at": "2026-11-08T01:45:56.751Z",
  "mode": "normal",
  "errors": [],
- "days": 6,
+ "days": 7,
  "fotmob": {
   "partidos": 240,
   "leidos": 1,
-  "conDetalle": 1
+  "conDetalle": 2
  },
- "matches": 16,
+ "matches": 24,
  "newFinished": 1,
  "unmatchedPlayers": [
-  "Milovan Velásquez (LSE)"
+  "Bastián Ismael Tapia Gomes (EVE)"
  ],
  "unknownTeams": [],
  "detailedMatches": 1,
- "espnCalls": 10,
- "seasonGames": 200,
- "seconds": 4
+ "espnCalls": 11,
+ "seasonGames": 201,
+ "seconds": 3
 }
