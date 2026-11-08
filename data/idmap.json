@@ -208,7 +208,7 @@
   "259968": "coq-r-holgado",
   "260054": "eve-a-medina",
   "260754": "udc-c-mesias",
-  "263309": "udc-r-funes-mori",
+  "263309": "aud-a-uribe",
   "264810": "uc-justo-giani",
   "265861": "ohi-f-gonzalez",
   "265862": "lse-l-alarcon",
@@ -283,7 +283,7 @@
   "301984": "hua-e-canete",
   "302125": "uc-a-canales",
   "302163": "col-j-villagra",
-  "302187": "eve-j-ovalle",
+  "302187": "csl-f-villagran",
   "302208": "lse-f-mardones",
   "302630": "lim-t-galletto",
   "302647": "eve-h-magallanes",
@@ -399,6 +399,7 @@
   "380526": "ohi-j-tapia",
   "380530": "uc-i-perez",
   "380532": "ulc-m-hiriart",
+  "380924": "csl-m-roki",
   "381133": "ohi-m-maturana",
   "381140": "uc-n-l-huillier",
   "381141": null,
@@ -471,8 +472,9 @@
   "3099649": null,
   "3102246": null,
   "3112916": null,
+  "3142609": null,
   "3142611": null,
   "5327636": null
  },
- "updatedAt": 1793687721394
+ "updatedAt": 1794169482270
 }

@@ -144,13 +144,13 @@
   "last": 1778889600000
  },
  "381680": {
-  "apps": 2,
-  "min": 53,
+  "apps": 3,
+  "min": 113,
   "name": "Dixon Pereira",
   "team": "COQ",
   "jersey": "31",
   "pos": 2,
-  "last": 1787781600000
+  "last": 1794151800000
  },
  "383107": {
   "apps": 1,
@@ -386,14 +386,23 @@
   "pos": null,
   "last": 1785112200000
  },
+ "3142609": {
+  "apps": 1,
+  "min": 30,
+  "name": "Ythans Emilio Blanco Aguilera",
+  "team": "COQ",
+  "jersey": "39",
+  "pos": null,
+  "last": 1794151800000
+ },
  "3142611": {
-  "apps": 3,
-  "min": 234,
+  "apps": 4,
+  "min": 292,
   "name": "G Díaz",
   "team": "COL",
   "jersey": "54",
   "pos": null,
-  "last": 1793397600000
+  "last": 1794160800000
  },
  "5327636": {
   "apps": 3,
