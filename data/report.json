@@ -1,23 +1,19 @@
 {
- "at": "2026-11-09T06:06:01.513Z",
+ "at": "2026-11-09T16:05:49.521Z",
  "mode": "normal",
  "errors": [],
  "days": 8,
  "fotmob": {
   "partidos": 240,
-  "leidos": 2,
+  "leidos": 0,
   "conDetalle": 8
  },
  "matches": 24,
- "newFinished": 2,
- "unmatchedPlayers": [
-  "Maximiliano Fernández (ULC)",
-  "Francisco Herrera (UDC)",
-  "Benjamín Pérez (OHI)"
- ],
+ "newFinished": 0,
+ "unmatchedPlayers": [],
  "unknownTeams": [],
- "detailedMatches": 2,
- "espnCalls": 15,
+ "detailedMatches": 0,
+ "espnCalls": 9,
  "seasonGames": 207,
- "seconds": 5
+ "seconds": 3
 }
