@@ -1,7 +1,7 @@
 {
  "99171": {
-  "apps": 5,
-  "min": 135,
+  "apps": 6,
+  "min": 144,
   "name": "Maximiliano Fernández",
   "team": "ULC",
   "jersey": "30",
@@ -126,13 +126,13 @@
   "last": 1776556800000
  },
  "372010": {
-  "apps": 3,
-  "min": 201,
+  "apps": 4,
+  "min": 218,
   "name": "Benjamín Pérez",
   "team": "OHI",
   "jersey": "34",
-  "pos": 2,
-  "last": 1791664200000
+  "pos": null,
+  "last": 1794178800000
  },
  "381141": {
   "apps": 5,
@@ -288,13 +288,13 @@
   "last": 1781386200000
  },
  "418357": {
-  "apps": 4,
-  "min": 75,
+  "apps": 5,
+  "min": 76,
   "name": "Francisco Herrera",
   "team": "UDC",
   "jersey": "34",
   "pos": null,
-  "last": 1793397600000
+  "last": 1794178800000
  },
  "418385": {
   "apps": 3,

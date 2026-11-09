@@ -1,23 +1,23 @@
 {
- "at": "2026-11-08T23:58:04.120Z",
+ "at": "2026-11-09T06:06:01.513Z",
  "mode": "normal",
  "errors": [],
- "days": 7,
+ "days": 8,
  "fotmob": {
   "partidos": 240,
-  "leidos": 3,
-  "conDetalle": 7
+  "leidos": 2,
+  "conDetalle": 8
  },
  "matches": 24,
- "newFinished": 3,
+ "newFinished": 2,
  "unmatchedPlayers": [
-  "G Díaz (COL)",
-  "Gedeón Díaz (COL, FotMob)",
-  "Maximiliano Fernández (ULC)"
+  "Maximiliano Fernández (ULC)",
+  "Francisco Herrera (UDC)",
+  "Benjamín Pérez (OHI)"
  ],
  "unknownTeams": [],
- "detailedMatches": 3,
- "espnCalls": 17,
- "seasonGames": 206,
- "seconds": 4
+ "detailedMatches": 2,
+ "espnCalls": 15,
+ "seasonGames": 207,
+ "seconds": 5
 }
