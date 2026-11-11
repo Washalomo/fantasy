@@ -1,19 +1,19 @@
 {
- "at": "2026-11-10T00:12:52.975Z",
+ "at": "2026-11-11T01:52:25.302Z",
  "mode": "normal",
  "errors": [],
- "days": 7,
+ "days": 6,
  "fotmob": {
   "partidos": 240,
   "leidos": 0,
-  "conDetalle": 8
+  "conDetalle": 6
  },
- "matches": 24,
+ "matches": 22,
  "newFinished": 0,
  "unmatchedPlayers": [],
  "unknownTeams": [],
  "detailedMatches": 0,
- "espnCalls": 8,
+ "espnCalls": 7,
  "seasonGames": 207,
- "seconds": 2
+ "seconds": 3
 }
