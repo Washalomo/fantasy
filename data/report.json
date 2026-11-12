@@ -1,14 +1,14 @@
 {
- "at": "2026-11-11T01:52:25.302Z",
+ "at": "2026-11-12T07:00:01.697Z",
  "mode": "normal",
  "errors": [],
  "days": 6,
  "fotmob": {
   "partidos": 240,
   "leidos": 0,
-  "conDetalle": 6
+  "conDetalle": 0
  },
- "matches": 22,
+ "matches": 16,
  "newFinished": 0,
  "unmatchedPlayers": [],
  "unknownTeams": [],
