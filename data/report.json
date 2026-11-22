@@ -1,23 +1,19 @@
 {
- "at": "2026-11-21T20:01:48.050Z",
+ "at": "2026-11-22T00:16:36.327Z",
  "mode": "normal",
  "errors": [],
  "days": 7,
  "fotmob": {
   "partidos": 240,
   "leidos": 1,
-  "conDetalle": 3
+  "conDetalle": 4
  },
  "matches": 24,
  "newFinished": 1,
- "unmatchedPlayers": [
-  "Dixon Pereira (COQ)",
-  "Ythans Emilio Blanco Aguilera (COQ)",
-  "Dixon Pereira (COQ, FotMob)"
- ],
+ "unmatchedPlayers": [],
  "unknownTeams": [],
  "detailedMatches": 1,
  "espnCalls": 11,
- "seasonGames": 210,
+ "seasonGames": 211,
  "seconds": 3
 }
