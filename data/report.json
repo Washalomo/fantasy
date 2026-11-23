@@ -1,19 +1,23 @@
 {
- "at": "2026-11-22T21:41:35.237Z",
+ "at": "2026-11-23T02:33:47.685Z",
  "mode": "normal",
  "errors": [],
  "days": 7,
  "fotmob": {
   "partidos": 240,
-  "leidos": 1,
-  "conDetalle": 6
+  "leidos": 2,
+  "conDetalle": 8
  },
  "matches": 24,
- "newFinished": 1,
- "unmatchedPlayers": [],
+ "newFinished": 2,
+ "unmatchedPlayers": [
+  "G Díaz (COL)",
+  "Gedeón Díaz (COL, FotMob)",
+  "Milovan Velásquez (LSE)"
+ ],
  "unknownTeams": [],
- "detailedMatches": 1,
- "espnCalls": 11,
- "seasonGames": 213,
- "seconds": 3
+ "detailedMatches": 2,
+ "espnCalls": 14,
+ "seasonGames": 215,
+ "seconds": 5
 }
